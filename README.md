@@ -169,9 +169,11 @@ The method is not ours.
   as a second Condition 5 decider, and documents the whole pipeline.
 
 What is ours is the observation that nobody had run this machinery above
-`n = 21`, the search runs, and the certificates. `docs/prior-art-method.ja.md`
-breaks the method into six components and attributes each; `docs/prior-art-results.ja.md`
-records the bound search. Both are in Japanese.
+`n = 21`, the search runs, and the certificates. [`docs/prior-art-method.md`](docs/prior-art-method.md)
+breaks the method into six components and attributes each;
+[`docs/prior-art-results.md`](docs/prior-art-results.md) records the search for
+prior publication of the bounds themselves. Japanese originals are alongside as
+`*.ja.md`.
 
 If any attribution here is wrong, please open an issue and we will correct it.
 
@@ -183,7 +185,9 @@ src/verify.py            our checker
 src/check_with_sqpack.py adapter for the jlevy/squares checker
 src/lp.py, src/certify.py the search
 docs/lower-bounds.md      write-up of the argument and the numbers
-docs/prior-art-*.ja.md    attribution notes (Japanese)
+docs/prior-art-method.md  which parts of the method are prior art, and whose
+docs/prior-art-results.md search for prior publication of these bounds
+docs/prior-art-*.ja.md    Japanese originals of the two notes above
 ```
 
 ## Status
