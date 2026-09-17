@@ -1,14 +1,22 @@
 # Verification of Prior Work (Surveyed on 2026-09-13)
 
-A literature survey confirmed that the 3 established bounds have not been previously published.
+A literature survey confirmed that the 5 established bounds have not been previously published.
 
-## Conclusion: All 3 Bounds Are Novel
+## Conclusion: All 5 Bounds Are Novel
 
 | n | This work | Best known lower bound | Source | Improvement |
 |---|---|---|---|---|
 | 26 | **5.45** | 5.3918 = 2√2+(27+2√10)/13 | Green 2000 (private communication to Friedman), DS7 Theorem 9 (k=5) | +0.058 |
 | 29 | **5.57** | 5.5117 = 2√2+6/√5 | Green 2000, DS7 Theorem 10 (k=5), monotonicity from n=28 | +0.058 |
 | 39 | **6.5** | 6.3506 = 2√2+(113+10√3)/37 | Green 2000, DS7 Theorem 9 (k=6), monotonicity from n=37 | +0.149 |
+| 55 | **7.54** | 7.4807 = 1+√(55−2⌊√55⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.059 |
+| 70 | **8.55** | 8.4162 = 1+√(70−2⌊√70⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.134 |
+
+The last two differ in kind from the first three. For n = 26, 29 and 39 the
+standing figure was Green's unpublished private communication; for n = 55 and
+n = 70 the survey records no Green value at all, and the strongest
+independently verified bound is Nagamochi's closed form. Those two therefore
+improve on a published, verified result rather than on an unrecovered one.
 
 ## Basis
 
