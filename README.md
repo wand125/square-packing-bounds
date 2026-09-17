@@ -1,16 +1,18 @@
-# Lower bounds for packing 26, 29 and 39 unit squares
+# Lower bounds for packing 26, 29, 39, 55 and 70 unit squares
 
 Let `s(n)` be the least side of a square that holds `n` unit squares with
 arbitrary orientations, no two overlapping. This repository contains exact
 weighted fractional certificates proving
 
 ```
-s(26) >= 109/20 = 5.45
+s(26) >= 109/20  = 5.45
 s(29) >= 557/100 = 5.57
-s(39) >= 13/2   = 6.5
+s(39) >= 13/2    = 6.5
+s(55) >= 377/50  = 7.54
+s(70) >= 171/20  = 8.55
 ```
 
-and, as a cross-check on the generator, a fourth certificate for `s(40) >= 13/2`
+and, as a cross-check on the generator, a sixth certificate for `s(40) >= 13/2`
 that also follows from the `n = 39` bound by monotonicity.
 
 The previous figures for these cases come from a private communication from
@@ -25,11 +27,16 @@ certificates anyone can re-check.
 | 26 | 5.3923 | **5.45** | +0.0577 |
 | 29 | 5.5119 | **5.57** | +0.0581 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
+| 55 | 7.4807 | **7.54** | +0.0593 |
+| 70 | 8.4162 | **8.55** | +0.1338 |
 | 40 | 6.4061 | 6.5 (follows from `n = 39`) | +0.0939 |
 
-By monotonicity `s(39) >= 6.5` also covers `n = 40..44` against the DS7 table,
-and the `n = 26` and `n = 29` bounds cover `27` and `30`, so the three
-certificates move ten entries.
+For `n = 55` and `n = 70` the standing figure is Nagamochi's closed form, which
+is the strongest independently verified bound the survey records for those
+cases; for `n = 26, 29, 39` it is Green's. By monotonicity `s(39) >= 6.5` also
+covers `n = 40..44` against the DS7 table, `s(70) >= 8.55` covers `n = 71` and
+`n = 72`, and the `n = 26` and `n = 29` bounds cover `27` and `30`, so the five
+certificates move fourteen entries.
 
 ## How the proof works
 
@@ -110,6 +117,8 @@ Results on one core, single worker:
 | 26 | 1376 | 179 | 646393601/25000000 = 25.855744 | 0.144256 | accepted, 28.2s |
 | 29 | 748 | 100 | 453011/15625 = 28.992704 | **0.007296** | accepted, 13.8s |
 | 39 | 2724 | 362 | 481487971/12500000 = 38.519038 | 0.480962 | accepted, 73.4s |
+| 55 | 3196 | 410 | 1362984297/25000000 = 54.519372 | 0.480628 | accepted, 131.4s |
+| 70 | 8060 | 1058 | 108946291/1562500 = 69.725626 | 0.274374 | accepted, 548.5s |
 | 40 | 1892 | 250 | 975019903/25000000 = 39.000796 | 0.999204 | accepted, 45.1s |
 
 The `n = 29` margin is the interesting one: the weights land `0.0073` under
