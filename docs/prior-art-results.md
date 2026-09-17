@@ -2,7 +2,7 @@
 
 A literature survey confirmed that the 5 established bounds have not been previously published.
 
-## Conclusion: All 5 Bounds Are Novel
+## Conclusion: All 7 Bounds Are Novel
 
 | n | This work | Best known lower bound | Source | Improvement |
 |---|---|---|---|---|
@@ -10,13 +10,21 @@ A literature survey confirmed that the 5 established bounds have not been previo
 | 29 | **5.57** | 5.5117 = 2√2+6/√5 | Green 2000, DS7 Theorem 10 (k=5), monotonicity from n=28 | +0.058 |
 | 39 | **6.5** | 6.3506 = 2√2+(113+10√3)/37 | Green 2000, DS7 Theorem 9 (k=6), monotonicity from n=37 | +0.149 |
 | 55 | **7.54** | 7.4807 = 1+√(55−2⌊√55⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.059 |
+| 56 | **7.62** | 7.5574 = 1+√(56−2⌊√56⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.063 |
 | 70 | **8.55** | 8.4162 = 1+√(70−2⌊√70⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.134 |
+| 72 | **8.61** | 8.5498 = 1+√(72−2⌊√72⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.060 |
 
-The last two differ in kind from the first three. For n = 26, 29 and 39 the
-standing figure was Green's unpublished private communication; for n = 55 and
-n = 70 the survey records no Green value at all, and the strongest
-independently verified bound is Nagamochi's closed form. Those two therefore
-improve on a published, verified result rather than on an unrecovered one.
+The last four differ in kind from the first three. For n = 26, 29 and 39 the
+standing figure was Green's unpublished private communication; for
+n = 55, 56, 70 and 72 the survey records no Green value at all, and the
+strongest independently verified bound is Nagamochi's closed form. Those four
+therefore improve on a published, verified result rather than on an unrecovered
+one.
+
+n = 56 and n = 72 also improve on what our own earlier certificates gave by
+monotonicity: s(55) ≥ 7.54 put s(56) at 7.54, and s(70) ≥ 8.55 put s(72) at
+8.55. Unlike the other bounds here, neither carries further entries with it —
+Nagamochi's form already exceeds 7.62 from n = 57 on and 8.61 from n = 73 on.
 
 ## Basis
 
