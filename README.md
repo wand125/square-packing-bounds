@@ -1,4 +1,4 @@
-# Lower bounds for packing 26, 29, 39, 53, 55, 56, 70 and 72 unit squares
+# Lower bounds for packing 26, 29, 39, 53, 55, 56, 69, 70 and 72 unit squares
 
 Let `s(n)` be the least side of a square that holds `n` unit squares with
 arbitrary orientations, no two overlapping. This repository contains exact
@@ -11,11 +11,12 @@ s(39) >= 13/2    = 6.5
 s(53) >= 369/50  = 7.38
 s(55) >= 377/50  = 7.54
 s(56) >= 381/50  = 7.62
+s(69) >= 841/100 = 8.41
 s(70) >= 171/20  = 8.55
 s(72) >= 861/100 = 8.61
 ```
 
-and, as a cross-check on the generator, a ninth certificate for `s(40) >= 13/2`
+and, as a cross-check on the generator, a tenth certificate for `s(40) >= 13/2`
 that also follows from the `n = 39` bound by monotonicity.
 
 The previous figures for these cases come from a private communication from
@@ -33,20 +34,22 @@ certificates anyone can re-check.
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
 | 56 | 7.5574 | **7.62** | +0.0626 |
+| 69 | 8.3485 | **8.41** | +0.0615 |
 | 70 | 8.4162 | **8.55** | +0.1338 |
 | 72 | 8.5498 | **8.61** | +0.0602 |
 | 40 | 6.4061 | 6.5 (follows from `n = 39`) | +0.0939 |
 
-For `n = 53, 55, 56, 70, 72` the standing figure is Nagamochi's closed form, which
+For `n = 53, 55, 56, 69, 70, 72` the standing figure is Nagamochi's closed form, which
 is the strongest independently verified bound the survey records for those
 cases; for `n = 26, 29, 39` it is Green's. By monotonicity `s(39) >= 6.5` also
 covers `n = 40..44` against the DS7 table, `s(70) >= 8.55` covers `n = 71`, and
 the `n = 26` and `n = 29` bounds cover `27` and `30`.
 
-The `n = 53`, `n = 56` and `n = 72` certificates carry no further entries with
-them. Nagamochi's closed form already exceeds 7.38 from `n = 54` on, 7.62 from
-`n = 57` on and 8.61 from `n = 73` on, so monotonicity gives nothing there;
-these three improve their own cases only.
+The `n = 53`, `n = 56`, `n = 69` and `n = 72` certificates carry no further
+entries with them. Nagamochi's closed form already exceeds 7.38 from `n = 54`
+on, 7.62 from `n = 57` on and 8.61 from `n = 73` on, and this repository's own
+`s(70) >= 8.55` covers everything above `n = 69`, so monotonicity gives nothing
+there; these four improve their own cases only.
 
 `s(56)` and `s(72)` improve on what our own earlier certificates already gave.
 Monotonicity from `s(55) >= 7.54` put `s(56)` at 7.54 and from `s(70) >= 8.55`

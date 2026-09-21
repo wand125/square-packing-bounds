@@ -2,7 +2,7 @@
 
 A literature survey confirmed that the 5 established bounds have not been previously published.
 
-## Conclusion: All 8 Bounds Are Novel
+## Conclusion: All 9 Bounds Are Novel
 
 | n | This work | Best known lower bound | Source | Improvement |
 |---|---|---|---|---|
@@ -12,13 +12,14 @@ A literature survey confirmed that the 5 established bounds have not been previo
 | 53 | **7.38** | 7.3246 = 1+√(53−2⌊√53⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.055 |
 | 55 | **7.54** | 7.4807 = 1+√(55−2⌊√55⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.059 |
 | 56 | **7.62** | 7.5574 = 1+√(56−2⌊√56⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.063 |
+| 69 | **8.41** | 8.3485 = 1+√(69−2⌊√69⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.062 |
 | 70 | **8.55** | 8.4162 = 1+√(70−2⌊√70⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.134 |
 | 72 | **8.61** | 8.5498 = 1+√(72−2⌊√72⌋+1) | Nagamochi 2005 closed form; no stronger value recorded | +0.060 |
 
-The last five differ in kind from the first three. For n = 26, 29 and 39 the
+The last six differ in kind from the first three. For n = 26, 29 and 39 the
 standing figure was Green's unpublished private communication; for
-n = 53, 55, 56, 70 and 72 the survey records no Green value at all, and the
-strongest independently verified bound is Nagamochi's closed form. Those five
+n = 53, 55, 56, 69, 70 and 72 the survey records no Green value at all, and the
+strongest independently verified bound is Nagamochi's closed form. Those six
 therefore improve on a published, verified result rather than on an unrecovered
 one.
 
