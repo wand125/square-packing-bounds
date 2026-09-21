@@ -14,7 +14,7 @@ def dedupe(fails, tol=1e-2, cap=80):
     return out
 
 
-def run(n, L, h_site=1/16, price_h=None, iters=600, log=print, price_every=2, price_max=200, resume=False, prune_above=30000, local_h=1/256, local_radius=0.25, local_trigger=3000, orbit_cap=6000, stall_stop=40):
+def run(n, L, h_site=1/16, price_h=None, iters=600, log=print, price_every=2, price_max=200, resume=False, prune_above=30000, local_h=1/256, local_radius=0.25, local_trigger=3000, orbit_cap=6000, stall_stop=40, max_per_dir=40, price_gate=None):
     import os
     state_path = f"state_n{n}_L{L}.pkl"
     dirs = lp.net_directions(verify.R)
@@ -41,7 +41,7 @@ def run(n, L, h_site=1/16, price_h=None, iters=600, log=print, price_every=2, pr
                 pickle.dump((cov, it), fh)
         t = time.time(); obj = cov.solve()
         # stage 1: cheap grid separation; stage 2: exact branch-and-bound separation
-        viol, worst = cov.find_violated(1/32, max_per_dir=40)
+        viol, worst = cov.find_violated(1/32, max_per_dir=max_per_dir)
         stage = "grid"
         if not viol:
             wpt = cov.w[cov.owner]; keep = wpt > 0
@@ -71,7 +71,17 @@ def run(n, L, h_site=1/16, price_h=None, iters=600, log=print, price_every=2, pr
             if added == 0:
                 break
             continue
-        elif price_h is not None and obj >= n - 0.1 and it % price_every == price_every - 1:
+        elif price_h is not None and (price_gate is None or obj >= n - price_gate) \
+                and it % price_every == price_every - 1:
+            # How eagerly to add atoms.  The successful certificates all grew their
+            # orbit count in two stages: 2-14 orbits per iteration over the first
+            # half of the run, then 37-54 per iteration at the end (n=55 went
+            # 1891 -> 2091 -> 6091).  Spending the early iterations on a small site
+            # set and only widening once the objective approaches the budget is what
+            # a gate buys; pricing every time instead grows the set at ~100 per
+            # iteration throughout, which inflates the search before the holes are
+            # closed.  price_gate=None prices unconditionally; a number w prices only
+            # while obj >= n - w, so the original behaviour is price_gate=0.1.
             added, rcmin = cov.price(price_h, max_add=price_max)
             log(f"   pricing (interleaved): added {added} orbits (min reduced cost {rcmin:.4f}); orbits={len(cov.orbits)}")
         cov.add_poses(new)
@@ -88,7 +98,19 @@ if __name__ == "__main__":
     hs = float(sys.argv[3]) if len(sys.argv) > 3 else 1/16
     ph = float(sys.argv[4]) if len(sys.argv) > 4 else None
     pa = 30000
+    mpd = 40
+    pg = None
     for a in sys.argv:
         if a.startswith("--prune="):
             pa = int(a.split("=")[1])
-    run(n, L, h_site=hs, price_h=ph, log=lambda m: print(m, flush=True), resume=("--resume" in sys.argv), prune_above=pa)
+        # rows per direction taken from the separation oracle each iteration.
+        # The default 40 over 201 directions caps an iteration at 8040 new rows,
+        # which the LP then has to carry; a smaller cap keeps only the worst
+        # violations and leaves the LP small enough to re-solve quickly.
+        if a.startswith("--maxdir="):
+            mpd = int(a.split("=")[1])
+        if a.startswith("--gate="):
+            pg = float(a.split("=")[1])
+    run(n, L, h_site=hs, price_h=ph, log=lambda m: print(m, flush=True),
+        resume=("--resume" in sys.argv), prune_above=pa, max_per_dir=mpd,
+        price_gate=pg)
