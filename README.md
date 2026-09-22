@@ -28,8 +28,8 @@ certificates anyone can re-check.
 
 | `n` | previously reported | this repository | improvement |
 |---|---|---|---|
-| 26 | 5.3923 | **5.45** | +0.0577 |
-| 29 | 5.5119 | **5.57** | +0.0581 |
+| 26 | 5.3923 | 5.45 (since improved, see below) | +0.0577 |
+| 29 | 5.5119 | 5.57 (since improved, see below) | +0.0581 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
@@ -42,8 +42,7 @@ certificates anyone can re-check.
 For `n = 53, 55, 56, 69, 70, 72` the standing figure is Nagamochi's closed form, which
 is the strongest independently verified bound the survey records for those
 cases; for `n = 26, 29, 39` it is Green's. By monotonicity `s(39) >= 6.5` also
-covers `n = 40..44` against the DS7 table, `s(70) >= 8.55` covers `n = 71`, and
-the `n = 26` and `n = 29` bounds cover `27` and `30`.
+covers `n = 40..44` against the DS7 table and `s(70) >= 8.55` covers `n = 71`.
 
 The `n = 53`, `n = 56`, `n = 69` and `n = 72` certificates carry no further
 entries with them. Nagamochi's closed form already exceeds 7.38 from `n = 54`
@@ -54,6 +53,26 @@ there; these four improve their own cases only.
 `s(56)` and `s(72)` improve on what our own earlier certificates already gave.
 Monotonicity from `s(55) >= 7.54` put `s(56)` at 7.54 and from `s(70) >= 8.55`
 put `s(72)` at 8.55; the direct certificates raise those by 0.08 and 0.06.
+
+## n = 26 and n = 29 have since been improved
+
+[tokoharu/square-packing-density-bounds](https://github.com/tokoharu/square-packing-density-bounds)
+proves `s(26) >= 1377/250 = 5.508` and `s(29) >= 571/100 = 5.71`, past the two
+certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
+
+That work generalizes the basis from point masses to uniform densities on
+axis-aligned rectangles, D4-symmetrized about the centre, so the quantity a
+placement captures is an area integral rather than a sum of point weights. A
+point is caught or missed outright; a rectangle is captured in proportion to
+the overlap, which gives the optimizer a degree of freedom the point basis does
+not have. For `n = 29` it reaches the better bound with *fewer* basis elements
+(552 rectangles against 748 atoms here), so the gain is in what each element
+can express, not in how many there are.
+
+The certificates here are unaffected as proofs -- they still establish what
+they claim -- but for these two cases they are no longer the strongest known.
+Both of tokoharu's certificates were re-checked against their verifier,
+compiled and run independently, as part of confirming this.
 
 ## How the proof works
 

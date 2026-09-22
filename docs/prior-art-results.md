@@ -1,8 +1,15 @@
 # Verification of Prior Work (Surveyed on 2026-09-13)
 
-A literature survey confirmed that the 5 established bounds have not been previously published.
+A literature survey confirmed that the 9 bounds established here had not been previously published.
 
-## Conclusion: All 9 Bounds Are Novel
+## Conclusion: All 9 Bounds Were Novel When Published
+
+**Update (2026-09-21).** `n = 26` and `n = 29` have since been improved by the
+rectangle-density certificates in
+[tokoharu/square-packing-density-bounds](https://github.com/tokoharu/square-packing-density-bounds)
+(5.508 and 5.71). The comparison below is against the figures that stood when
+these certificates were published; they remain valid proofs, but for those two
+cases they are no longer the strongest known.
 
 | n | This work | Best known lower bound | Source | Improvement |
 |---|---|---|---|---|
