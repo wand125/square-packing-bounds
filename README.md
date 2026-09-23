@@ -19,6 +19,16 @@ s(72) >= 861/100 = 8.61
 and, as a cross-check on the generator, a tenth certificate for `s(40) >= 13/2`
 that also follows from the `n = 39` bound by monotonicity.
 
+It also contains one certificate of a different kind, a rectangle-density
+certificate in tokoharu's format built here with his solver, proving
+
+```
+s(29) >= 287/50 = 5.74
+```
+
+which supersedes the `n = 29` point certificate above; see
+[s(29) >= 5.74](#s29--574-a-rectangle-density-certificate-built-here).
+
 The previous figures for these cases come from a private communication from
 Trevor Green to Erich Friedman, reported in Friedman's survey *Packing Unit
 Squares in Squares* (Electronic Journal of Combinatorics, DS7), whose last
@@ -73,6 +83,47 @@ The certificates here are unaffected as proofs -- they still establish what
 they claim -- but for these two cases they are no longer the strongest known.
 Both of tokoharu's certificates were re-checked against their verifier,
 compiled and run independently, as part of confirming this.
+
+## s(29) >= 5.74, a rectangle-density certificate built here
+
+`certificates/rect_n29_L574/` is a certificate in tokoharu's format proving
+`s(29) >= 287/50 = 5.74`, above his own `571/100 = 5.71`. It was produced with
+his solver, driven by `push.py`, the ladder driver we contributed to his
+repository ([PR #1](https://github.com/tokoharu/square-packing-density-bounds/pull/1),
+[PR #2](https://github.com/tokoharu/square-packing-density-bounds/pull/2), both
+merged). Starting from his certified `n = 29` certificate at 5.71, the driver
+raises the side one rung at a time, running his `engine.py` search, then his
+`certify.py`, and keeping a rung only when the certificate is accepted. The
+rungs that produced this file were 5.73, 5.7325, 5.73375, 5.735, 5.7375,
+5.738125, 5.73875 and 5.74; every one of them was certified before the next
+was attempted. The climb is still running; this is the highest certified rung
+at the time of writing.
+
+The directory holds the data his verifier reads and the verifier itself:
+
+| file | meaning |
+|---|---|
+| `certified_candidate.json` | the certificate: `L = 287/50`, `B = 9977/10000`, 1000 rectangles (125 seed rectangles under `D4`) with exact rational densities |
+| `certificate_input.txt` | the same data in the text form `verify.cpp` parses |
+| `certificate_metadata.json` | exact total mass `283074999609155607507/10^19 = 28.3075` against budget 29, and the SHA-256 of the input |
+| `verify.cpp`, `run_verify.py` | tokoharu's interval verifier and its runner, unchanged (MIT; `verify.cpp` SHA-256 `a75140df…`) |
+| `verification_summary.json`, `verified_angles.jsonl` | the record of the accepting run: 201 angle cases, 6,220,710 nodes, every leaf lower bound at least `10001/10000` |
+
+To re-check it (needs `g++`; about four minutes on four cores):
+
+```bash
+cd certificates/rect_n29_L574 && python3 run_verify.py --workers 4
+```
+
+It ends by writing `verification_summary.json` with `"status": "VERIFIED"`. We
+re-ran it from these exact bytes on 2026-09-24 before publishing. The argument
+behind `verify.cpp` — outward-rounded interval arithmetic, a certified
+inscribed-polygon area for each rectangle overlap, derivative bounds over
+centre boxes, and the same rational angular net as above — is tokoharu's and is
+documented in his repository; nothing in the mathematics is ours. What is ours
+is the driver and the machine time.
+
+`src/verify.py` does not read this format: it checks point certificates only.
 
 ## How the proof works
 
@@ -225,7 +276,7 @@ If any attribution here is wrong, please open an issue and we will correct it.
 ## Layout
 
 ```
-certificates/   the four certificates as JSON
+certificates/   the ten point certificates as JSON, and rect_n29_L574/ in tokoharu's format
 src/verify.py            our checker
 src/check_with_sqpack.py adapter for the jlevy/squares checker
 src/lp.py, src/certify.py the search
@@ -238,7 +289,11 @@ docs/prior-art-*.ja.md    Japanese originals of the two notes above
 ## Status
 
 Computer-assisted certificates, checked by two independent implementations.
-They have not been peer reviewed.
+They have not been peer reviewed. [jlevy/squares](https://github.com/jlevy/squares)
+records the point bounds for `n = 39, 40, 53, 55, 56, 69, 70, 72` in its
+frontier register, in both the reported and the verified lane, after an exact
+replay of these files with its own checker (evidence
+`E-wand125-point-source-replay`, 2026-09-22).
 
 Parts of this work were produced with AI assistance under human direction.
 
