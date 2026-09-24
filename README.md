@@ -23,11 +23,11 @@ It also contains one certificate of a different kind, a rectangle-density
 certificate in tokoharu's format built here with his solver, proving
 
 ```
-s(29) >= 287/50 = 5.74
+s(29) >= 4593/800 = 5.74125
 ```
 
 which supersedes the `n = 29` point certificate above; see
-[s(29) >= 5.74](#s29--574-a-rectangle-density-certificate-built-here).
+[s(29): a ladder of rectangle-density certificates](#s29-a-ladder-of-rectangle-density-certificates-built-here).
 
 The previous figures for these cases come from a private communication from
 Trevor Green to Erich Friedman, reported in Friedman's survey *Packing Unit
@@ -38,8 +38,8 @@ certificates anyone can re-check.
 
 | `n` | previously reported | this repository | improvement |
 |---|---|---|---|
-| 26 | 5.3923 | 5.45 (since improved, see below) | +0.0577 |
-| 29 | 5.5119 | 5.57 (since improved, see below) | +0.0581 |
+| 26 | 5.3923 | 5.45 (since improved elsewhere, see below) | +0.0577 |
+| 29 | 5.5119 | 5.57 (superseded here by 5.74125, see below) | +0.0581 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
@@ -68,7 +68,9 @@ put `s(72)` at 8.55; the direct certificates raise those by 0.08 and 0.06.
 
 [tokoharu/square-packing-density-bounds](https://github.com/tokoharu/square-packing-density-bounds)
 proves `s(26) >= 1377/250 = 5.508` and `s(29) >= 571/100 = 5.71`, past the two
-certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
+point certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
+For `n = 29` we have since carried his method further ourselves, to
+`4593/800 = 5.74125`; `n = 26` stands at his 5.508.
 
 That work generalizes the basis from point masses to uniform densities on
 axis-aligned rectangles, D4-symmetrized about the centre, so the quantity a
@@ -84,44 +86,81 @@ they claim -- but for these two cases they are no longer the strongest known.
 Both of tokoharu's certificates were re-checked against their verifier,
 compiled and run independently, as part of confirming this.
 
-## s(29) >= 5.74, a rectangle-density certificate built here
+## s(29): a ladder of rectangle-density certificates built here
 
-`certificates/rect_n29_L574/` is a certificate in tokoharu's format proving
-`s(29) >= 287/50 = 5.74`, above his own `571/100 = 5.71`. It was produced with
-his solver, driven by `push.py`, the ladder driver we contributed to his
-repository ([PR #1](https://github.com/tokoharu/square-packing-density-bounds/pull/1),
+`certificates/rect_n29_L*/` holds four certificates in tokoharu's format, each
+proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
+
+| directory | `L` | exact | total mass | budget | verifier nodes |
+|---|---|---|---|---|---|
+| `rect_n29_L574` | 5.74 | 287/50 | 28.307500 | 29 | 6,220,710 |
+| `rect_n29_L57403125` | 5.7403125 | 18369/3200 | 28.312239 | 29 | 6,259,495 |
+| `rect_n29_L5740625` | 5.740625 | 1837/320 | 28.292811 | 29 | 6,801,596 |
+| **`rect_n29_L574125`** | **5.74125** | **4593/800** | **28.900000** | 29 | 4,861,306 |
+
+The last row is the standing bound: **`s(29) >= 4593/800 = 5.74125`**.
+
+They were produced with tokoharu's solver, driven by `push.py`, the ladder
+driver we contributed to his repository
+([PR #1](https://github.com/tokoharu/square-packing-density-bounds/pull/1),
 [PR #2](https://github.com/tokoharu/square-packing-density-bounds/pull/2), both
 merged). Starting from his certified `n = 29` certificate at 5.71, the driver
 raises the side one rung at a time, running his `engine.py` search, then his
 `certify.py`, and keeping a rung only when the certificate is accepted. The
-rungs that produced this file were 5.73, 5.7325, 5.73375, 5.735, 5.7375,
-5.738125, 5.73875 and 5.74; every one of them was certified before the next
-was attempted. The climb is still running; this is the highest certified rung
-at the time of writing.
+rungs were 5.73, 5.7325, 5.73375, 5.735, 5.7375, 5.738125, 5.73875, 5.74,
+5.7403125 and 5.740625; every one of them was certified before the next was
+attempted.
 
-The directory holds the data his verifier reads and the verifier itself:
+### How the last rung was obtained
+
+`5.74125` did not come from the ladder. The search had spent six hours on that
+side without converging: its incumbent sat at mass 28.2747354324, and each
+further repair round shaved off less than the round before. Rather than keep
+minimising, we used the room left under the budget. Every weight of that stalled
+incumbent was multiplied by the exact rational
+
+```
+289000000000000000000/282747354324056990663
+```
+
+which takes the total mass to exactly `289/10 = 28.9`, still strictly below 29.
+Scaling every weight by a common factor preserves the covering structure and
+raises every captured amount by the same factor, so a placement that fell short
+of 1 by less than that factor now clears it. The scaled certificate was then put
+through the unmodified verifier, which accepted all 201 angle cases in 538
+seconds.
+
+The trade is margin for time: this certificate leaves only 0.1 under the budget
+where the 5.740625 rung leaves 0.707. It is a certificate either way — the
+budget condition is met — but it is a thinner foundation for the next rung,
+which has to repair its way back to a comfortable margin.
+
+### Checking them
+
+Each directory holds the data the verifier reads and the verifier itself:
 
 | file | meaning |
 |---|---|
-| `certified_candidate.json` | the certificate: `L = 287/50`, `B = 9977/10000`, 1000 rectangles (125 seed rectangles under `D4`) with exact rational densities |
-| `certificate_input.txt` | the same data in the text form `verify.cpp` parses |
-| `certificate_metadata.json` | exact total mass `283074999609155607507/10^19 = 28.3075` against budget 29, and the SHA-256 of the input |
+| `certified_candidate.json` | the certificate: `L`, `B = 9977/10000`, and the rectangles with exact rational densities |
+| `certificate_input.txt` | the same data in the text form `verify.cpp` parses, as outward-rounded interval endpoints; its header counts the D4 images of the positive-weight rectangles |
+| `certificate_metadata.json` | exact total mass and the SHA-256 of the input |
 | `verify.cpp`, `run_verify.py` | tokoharu's interval verifier and its runner, unchanged (MIT; `verify.cpp` SHA-256 `a75140df…`) |
-| `verification_summary.json`, `verified_angles.jsonl` | the record of the accepting run: 201 angle cases, 6,220,710 nodes, every leaf lower bound at least `10001/10000` |
+| `verification_summary.json`, `verified_angles.jsonl` | the record of the accepting run: 201 angle cases and every leaf lower bound at least `10001/10000` |
 
-To re-check it (needs `g++`; about four minutes on four cores):
+To re-check one (needs `g++`; a few minutes on four cores):
 
 ```bash
-cd certificates/rect_n29_L574 && python3 run_verify.py --workers 4
+cd certificates/rect_n29_L574125 && python3 run_verify.py --workers 4
 ```
 
-It ends by writing `verification_summary.json` with `"status": "VERIFIED"`. We
-re-ran it from these exact bytes on 2026-09-24 before publishing. The argument
+It ends by writing `verification_summary.json` with `"status": "VERIFIED"`. For
+each of the four, the `input_sha256` recorded by the accepting run matches the
+one in its metadata, so the bytes verified are the bytes published. The argument
 behind `verify.cpp` — outward-rounded interval arithmetic, a certified
-inscribed-polygon area for each rectangle overlap, derivative bounds over
-centre boxes, and the same rational angular net as above — is tokoharu's and is
+inscribed-polygon area for each rectangle overlap, derivative bounds over centre
+boxes, and the same rational angular net as above — is tokoharu's and is
 documented in his repository; nothing in the mathematics is ours. What is ours
-is the driver and the machine time.
+is the driver, the machine time, and the scaling step described above.
 
 `src/verify.py` does not read this format: it checks point certificates only.
 
@@ -276,7 +315,7 @@ If any attribution here is wrong, please open an issue and we will correct it.
 ## Layout
 
 ```
-certificates/   the ten point certificates as JSON, and rect_n29_L574/ in tokoharu's format
+certificates/   the ten point certificates as JSON, and rect_n29_L5*/ in tokoharu's format
 src/verify.py            our checker
 src/check_with_sqpack.py adapter for the jlevy/squares checker
 src/lp.py, src/certify.py the search
