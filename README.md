@@ -23,7 +23,7 @@ It also contains one certificate of a different kind, a rectangle-density
 certificate in tokoharu's format built here with his solver, proving
 
 ```
-s(29) >= 4593/800 = 5.74125
+s(29) >= 919/160 = 5.74375
 ```
 
 which supersedes the `n = 29` point certificate above; see
@@ -39,7 +39,7 @@ certificates anyone can re-check.
 | `n` | previously reported | this repository | improvement |
 |---|---|---|---|
 | 26 | 5.3923 | 5.45 (since improved elsewhere, see below) | +0.0577 |
-| 29 | 5.5119 | 5.57 (superseded here by 5.74125, see below) | +0.0581 |
+| 29 | 5.5119 | 5.57 (superseded here by 5.74375, see below) | +0.0581 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
@@ -70,7 +70,7 @@ put `s(72)` at 8.55; the direct certificates raise those by 0.08 and 0.06.
 proves `s(26) >= 1377/250 = 5.508` and `s(29) >= 571/100 = 5.71`, past the two
 point certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
 For `n = 29` we have since carried his method further ourselves, to
-`4593/800 = 5.74125`; `n = 26` stands at his 5.508.
+`919/160 = 5.74375`; `n = 26` stands at his 5.508.
 
 That work generalizes the basis from point masses to uniform densities on
 axis-aligned rectangles, D4-symmetrized about the centre, so the quantity a
@@ -88,7 +88,7 @@ compiled and run independently, as part of confirming this.
 
 ## s(29): a ladder of rectangle-density certificates built here
 
-`certificates/rect_n29_L*/` holds four certificates in tokoharu's format, each
+`certificates/rect_n29_L*/` holds five certificates in tokoharu's format, each
 proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 
 | directory | `L` | exact | total mass | budget | verifier nodes |
@@ -98,7 +98,7 @@ proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 | `rect_n29_L5740625` | 5.740625 | 1837/320 | 28.292811 | 29 | 6,801,596 |
 | **`rect_n29_L574125`** | **5.74125** | **4593/800** | **28.900000** | 29 | 4,861,306 |
 
-The last row is the standing bound: **`s(29) >= 4593/800 = 5.74125`**.
+The last row is the standing bound: **`s(29) >= 919/160 = 5.74375`**.
 
 They were produced with tokoharu's solver, driven by `push.py`, the ladder
 driver we contributed to his repository
@@ -130,10 +130,16 @@ of 1 by less than that factor now clears it. The scaled certificate was then put
 through the unmodified verifier, which accepted all 201 angle cases in 538
 seconds.
 
-The trade is margin for time: this certificate leaves only 0.1 under the budget
+The trade is margin for time: that certificate leaves only 0.1 under the budget
 where the 5.740625 rung leaves 0.707. It is a certificate either way — the
-budget condition is met — but it is a thinner foundation for the next rung,
-which has to repair its way back to a comfortable margin.
+budget condition is met — but it is a thinner foundation for the next rung.
+
+**The next rung repaired it.** Restarting the ladder from the scaled certificate,
+`5.74375` came back with mass 28.317278, a margin of 0.683 — within a whisker of
+the 0.707 the ordinary rungs carry, and 6.8 times the margin it started from. The
+thin foundation lasts exactly one rung. That is what makes the scaling step worth
+repeating rather than a one-off rescue: it costs one rung of margin to convert a
+stalled search into a certificate.
 
 ### Checking them
 
@@ -150,11 +156,11 @@ Each directory holds the data the verifier reads and the verifier itself:
 To re-check one (needs `g++`; a few minutes on four cores):
 
 ```bash
-cd certificates/rect_n29_L574125 && python3 run_verify.py --workers 4
+cd certificates/rect_n29_L574375 && python3 run_verify.py --workers 4
 ```
 
 It ends by writing `verification_summary.json` with `"status": "VERIFIED"`. For
-each of the four, the `input_sha256` recorded by the accepting run matches the
+each of the five, the `input_sha256` recorded by the accepting run matches the
 one in its metadata, so the bytes verified are the bytes published. The argument
 behind `verify.cpp` — outward-rounded interval arithmetic, a certified
 inscribed-polygon area for each rectangle overlap, derivative bounds over centre
