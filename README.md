@@ -1,4 +1,4 @@
-# Lower bounds for packing 26, 29, 32, 39, 45, 53, 55, 56, 69, 70 and 72 unit squares
+# Lower bounds for packing 19, 20, 21, 26–32, 39, 45, 53, 55, 56, 69, 70 and 72 unit squares
 
 Let `s(n)` be the least side of a square that holds `n` unit squares with
 arbitrary orientations, no two overlapping. This repository contains exact
@@ -23,18 +23,24 @@ It also contains certificates of a different kind, rectangle-density
 certificates in tokoharu's format built here with his solver, proving
 
 ```
-s(29) >= 144/25    = 5.76
+s(19) >= 481/100   = 4.81
+s(20) >= 122/25    = 4.88
+s(21) >= 493/100   = 4.93
+s(27) >= 277/50    = 5.54
+s(28) >= 277/50    = 5.54
+s(29) >= 2311/400  = 5.7775
 s(32) >= 291/50    = 5.82
-s(45) >= 2741/400  = 6.8525
+s(45) >= 687/100   = 6.87
 ```
 
-The first supersedes the `n = 29` point certificate above and, by
-monotonicity, also gives `s(30), s(31) >= 5.76`; see
-[s(29): a ladder of rectangle-density certificates](#s29-a-ladder-of-rectangle-density-certificates-built-here)
-and [n = 32 and n = 45](#n--32-and-n--45-rectangle-density-certificates-from-our-own-parents).
-Two further rectangle certificates, for `n = 21` and `n = 28`, reach values
-already held by others and are included as independent certificates of
-those values; see [Matching certificates](#matching-certificates-n--21-and-n--28).
+The `n = 29` certificate supersedes the point certificate above and, by
+monotonicity, also gives `s(30), s(31) >= 5.7775`. See
+[s(29): a ladder of rectangle-density certificates](#s29-a-ladder-of-rectangle-density-certificates-built-here),
+[n = 32 and n = 45](#n--32-and-n--45-rectangle-density-certificates-from-our-own-parents)
+and [n = 19 to 28](#n--19-to-28-rectangle-density-certificates-past-the-register).
+Further rectangle certificates for `n = 18` and `n = 26` reach values that
+others already hold. They are included as independent certificates of those
+values; see [Matching certificates](#matching-certificates).
 
 The previous figures for these cases come from a private communication from
 Trevor Green to Erich Friedman, reported in Friedman's survey *Packing Unit
@@ -49,7 +55,7 @@ certificates anyone can re-check.
 | 29 | 5.5119 | 5.57 (superseded here by 5.76, see below) | +0.0581 |
 | 32 | 5.7958 | **5.82** (rectangle density, see below) | +0.0242 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
-| 45 | 6.8310 | **6.8525** (rectangle density, see below) | +0.0215 |
+| 45 | 6.8310 | **6.87** (rectangle density, see below) | +0.0390 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
 | 56 | 7.5574 | **7.62** | +0.0626 |
@@ -78,8 +84,9 @@ put `s(72)` at 8.55; the direct certificates raise those by 0.08 and 0.06.
 [tokoharu/square-packing-density-bounds](https://github.com/tokoharu/square-packing-density-bounds)
 proves `s(26) >= 1377/250 = 5.508` and `s(29) >= 571/100 = 5.71`, past the two
 point certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
-For `n = 29` we have since carried his method further ourselves, to
-`144/25 = 5.76`; `n = 26` stands at his 5.508.
+We have since carried his method further ourselves: `n = 29` to
+`2311/400 = 5.7775`, and `n = 27, 28` to `277/50 = 5.54`. For `n = 26` we
+have an independent certificate at his 5.508 but nothing beyond it.
 
 That work generalizes the basis from point masses to uniform densities on
 axis-aligned rectangles, D4-symmetrized about the centre, so the quantity a
@@ -97,7 +104,7 @@ compiled and run independently, as part of confirming this.
 
 ## s(29): a ladder of rectangle-density certificates built here
 
-`certificates/rect_n29_L*/` holds fourteen certificates in tokoharu's format, each
+`certificates/rect_n29_L*/` holds twenty-one certificates in tokoharu's format, each
 proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 
 | directory | `L` | exact | total mass | budget | verifier nodes |
@@ -115,11 +122,18 @@ proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 | `rect_n29_L575375` | 5.75375 | 4603/800 | 28.990000 | 29 | 5,222,853 |
 | `rect_n29_L5755` | 5.755 | 1151/200 | 28.990000 | 29 | 5,246,956 |
 | `rect_n29_L57575` | 5.7575 | 2303/400 | 28.990000 | 29 | 5,530,431 |
-| **`rect_n29_L576`** | **5.76** | **144/25** | **28.990000** | 29 | 5,470,623 |
+| `rect_n29_L576` | 5.76 | 144/25 | 28.990000 | 29 | 5,470,623 |
+| `rect_n29_L57625` | 5.7625 | 461/80 | 28.990000 | 29 | 5,435,964 |
+| `rect_n29_L5765` | 5.765 | 1153/200 | 28.990000 | 29 | 5,726,956 |
+| `rect_n29_L57675` | 5.7675 | 2307/400 | 28.990000 | 29 | 6,020,892 |
+| `rect_n29_L577` | 5.77 | 577/100 | 28.990000 | 29 | 6,180,299 |
+| `rect_n29_L57725` | 5.7725 | 2309/400 | 28.990000 | 29 | 6,391,897 |
+| `rect_n29_L5775` | 5.775 | 231/40 | 28.990000 | 29 | 6,682,472 |
+| **`rect_n29_L57775`** | **5.7775** | **2311/400** | **28.990000** | 29 | 6,974,142 |
 
-The last row is the standing bound: **`s(29) >= 144/25 = 5.76`**. Its total
+The last row is the standing bound: **`s(29) >= 2311/400 = 5.7775`**. Its total
 mass is `2899/100 < 30 < 31`, so the same certificate also proves
-`s(30) >= 5.76` and `s(31) >= 5.76`.
+`s(30) >= 5.7775` and `s(31) >= 5.7775`.
 
 They were produced with tokoharu's solver, driven by `push.py`, the ladder
 driver we contributed to his repository
@@ -139,9 +153,9 @@ rung that then certified advances the bound by 1/1600 rather than 1/400.
 No tolerance was relaxed to obtain it. The ladder then certified 5.7525 as an
 ordinary rung.
 
-### The last four rungs: fixed support, then scaling
+### The rungs from 5.75375 on: fixed support, then scaling
 
-`5.75375`, `5.755`, `5.7575` and `5.76` came from a second route, which keeps
+Every rung from `5.75375` to `5.7775` came from a second route, which keeps
 the parent's rectangles instead of searching for new ones. For each rung the
 previous certified rung is the parent. Its rectangles are carried to the new
 side with their positions scaled, and his LP is solved again over that fixed
@@ -151,8 +165,8 @@ attempt at that side. Once the screen found no violation, every weight was
 multiplied by one exact rational factor that brings the total mass to exactly
 `2899/100 = 28.99`. This is the scaling step described in the next subsection,
 used here with a reserve of 0.01 instead of 0.1. The factor is recorded in
-each `certified_candidate.json` under `scaling_experiment` (for `5.76` it takes
-28.537854 to 28.99). The scaled certificate then went through the unmodified
+each `certified_candidate.json` under `scaling_experiment` (for `5.7775` it takes
+28.890942 to 28.99). The scaled certificate then went through the unmodified
 verifier.
 
 This route did not use `push.py`. The reserve is thinner than on the ladder
@@ -218,8 +232,9 @@ satisfies the condition. For every rectangle certificate here, the
 `input_sha256` recorded by the accepting run matches the one in its metadata,
 so the bytes verified are the bytes published.
 
-Before publication, the certificates for 5.76, 5.82, 6.8525, 4.88 and 5.508
-were replayed on a second machine from the published files alone. Each
+Before publication, every standing certificate (the highest one for each
+`n`, including the matching ones) was replayed on a second machine from the
+published files alone. Each
 `certificate_input.txt` was regenerated from `certified_candidate.json` and
 matched byte for byte. The exact mass was recomputed from the rational weights.
 The unmodified verifier was run again, and every replay was accepted with the
@@ -232,8 +247,7 @@ inscribed-polygon area for each rectangle overlap, derivative bounds over centre
 boxes, and the same rational angular net as above — is tokoharu's and is
 documented in his repository; nothing in the mathematics is ours. What is ours
 is the driver, the machine time, the fixed-support route, the scaling step
-described above, and the choice of parents for `n = 32` and `n = 45` described
-below.
+described above, and the choice of parents described below.
 
 `src/verify.py` does not read this format: it checks point certificates only.
 
@@ -246,10 +260,11 @@ both was Nagamochi's closed form:
 | directory | `L` | exact | total mass | budget | previous | verifier nodes |
 |---|---|---|---|---|---|---|
 | **`rect_n32_L582`** | **5.82** | **291/50** | 31.990000 | 32 | `1 + sqrt(23)` = 5.795832 | 2,766,145 |
-| **`rect_n45_L68525`** | **6.8525** | **2741/400** | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 7,443,908 |
+| `rect_n45_L68525` | 6.8525 | 2741/400 | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 7,443,908 |
+| **`rect_n45_L687`** | **6.87** | **687/100** | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 7,995,368 |
 
 Both beat the previous figure exactly: `(5.82 - 1)^2 = 23.2324 > 23` and
-`(6.8525 - 1)^2 = 34.25175625 > 34`.
+`(6.87 - 1)^2 = 34.4569 > 34`.
 
 **n = 32.** The first rung, 5.80, took its rectangles from the `n = 29`
 certificate at 5.751875 above, scaled to the new side. His LP was solved again
@@ -266,22 +281,59 @@ support. Wall-anchored supports and a coarse full-container fallback were
 added. His LP then optimized from scratch, so no point weight is carried over
 as a rectangle weight. The first rung to certify was 6.84. From there,
 fixed-support rungs as for `n = 29` raised it through 6.8425, 6.845, 6.8475
-and 6.85 to 6.8525. Every rung was scaled to mass `4499/100` and verified
-before the next was attempted. Only the last one is published here.
+and 6.85 to 6.8525, and later in steps of 1/400 to 6.87. Every rung was
+scaled to mass `4499/100` and verified before the next was attempted. Only
+6.8525 and 6.87 are published here.
 
-## Matching certificates: n = 21 and n = 28
+## n = 19 to 28: rectangle-density certificates past the register
 
-These two reach values that other people had already proved. They are included
-because they were reached independently, by the same route, and pass the same
-unmodified verifier. They do not improve any record.
+Five more certificates, in the same format and checked by the same unmodified
+verifier, go past the verified lane of the
+[jlevy/squares](https://github.com/jlevy/squares) register (as of its commit
+`db3f5f3`, 2026-09-25):
+
+| directory | `L` | exact | total mass | budget | register, verified lane | verifier nodes |
+|---|---|---|---|---|---|---|
+| **`rect_n19_L481`** | **4.81** | **481/100** | 18.990000 | 19 | 4.80 (jlevy/squares) | 10,759,911 |
+| **`rect_n20_L488`** | **4.88** | **122/25** | 19.990000 | 20 | 4.85 (jlevy/squares) | 7,981,881 |
+| **`rect_n21_L493`** | **4.93** | **493/100** | 20.990000 | 21 | 4.88 (jlevy/squares) | 11,243,723 |
+| **`rect_n27_L554`** | **5.54** | **277/50** | 26.990000 | 27 | 5.508 (tokoharu, by monotonicity) | 11,903,829 |
+| **`rect_n28_L554`** | **5.54** | **277/50** | 27.990000 | 28 | 5.508 (tokoharu, by monotonicity) | 20,615,178 |
+
+For `n = 28` the register's reported lane also carries Green's
+`2*sqrt(2) + 6/sqrt(5)` = 5.511709, and 5.54 is above that as well. The
+`n = 27` certificate has mass 26.99, so it also proves `s(28) >= 5.54`. The
+`n = 28` certificate was found separately and is a direct one.
+
+The chains for `n = 18`, `19`, `21` and `28` go back to our own point
+certificates for those sizes. `n = 20` started from the `n = 19` rectangle
+certificate at 4.62. As for `n = 45`, the positive-weight atoms were
+replaced by small rectangle supports, and his LP optimized the weights from
+scratch. Each chain then climbed rung by rung. Most rungs used the fixed-support
+route described for `n = 29`. Some rungs also added columns: new free-standing
+rectangles priced against the LP duals. For `n = 19` and `n = 21` the LP was
+first solved by an interior-point method rather than simplex. That changes how
+the optimum is found, not the certificate the verifier checks. `n = 27` takes
+its rectangles from the `n = 26` certificate below, with fixed support at
+side 5.54. Every certificate was scaled to mass exactly `n - 1/100` before
+verification, and the factor is in the file.
+
+## Matching certificates
+
+These reach values that other people had already proved. They are included
+because they were reached independently and pass the same unmodified verifier.
+They do not improve any record.
 
 | directory | `L` | exact | total mass | budget | value already held by | verifier nodes |
 |---|---|---|---|---|---|---|
-| `rect_n21_L488` | 4.88 | 122/25 | 20.990000 | 21 | jlevy/squares, point certificate | 9,136,007 |
-| `rect_n28_L5508` | 5.508 | 1377/250 | 27.990000 | 28 | tokoharu's `n = 26` certificate, by monotonicity | 18,949,885 |
+| `rect_n18_L4679` | 4.679 | 4679/1000 | 17.990000 | 18 | jlevy/squares, point certificate | 9,971,192 |
+| `rect_n26_L5508` | 5.508 | 1377/250 | 25.990000 | 26 | tokoharu | 19,606,206 |
+| `rect_n21_L488` | 4.88 | 122/25 | 20.990000 | 21 | jlevy/squares (now superseded here by 4.93) | 9,136,007 |
+| `rect_n28_L5508` | 5.508 | 1377/250 | 27.990000 | 28 | tokoharu, by monotonicity (now superseded here by 5.54) | 18,949,885 |
 
-The `n = 28` certificate is a direct one for `n = 28`. It gives nothing for
-`n = 26` or `n = 27`, where its mass of 27.99 exceeds the budget.
+The `n = 26` certificate is a direct one for `n = 26`, found independently of
+tokoharu's. Its last stage fixed a support that had been grown by
+free-rectangle pricing and repaired it at 5.508.
 
 ## How the proof works
 
@@ -455,8 +507,7 @@ frontier register, in both the reported and the verified lane, after an exact
 replay of these files with its own checker (evidence
 `E-wand125-point-source-replay`, 2026-09-22). As of its commit `db3f5f3`
 (2026-09-25), the register does not yet include the rectangle certificates
-here. Its verified lane still has 5.71 for `n = 29..31` and Nagamochi's closed
-form for `n = 32` and `n = 45`.
+here.
 
 Parts of this work were produced with AI assistance under human direction.
 
