@@ -23,7 +23,7 @@ It also contains one certificate of a different kind, a rectangle-density
 certificate in tokoharu's format built here with his solver, proving
 
 ```
-s(29) >= 4601/800 = 5.75125
+s(29) >= 9203/1600 = 5.751875
 ```
 
 which supersedes the `n = 29` point certificate above; see
@@ -39,7 +39,7 @@ certificates anyone can re-check.
 | `n` | previously reported | this repository | improvement |
 |---|---|---|---|
 | 26 | 5.3923 | 5.45 (since improved elsewhere, see below) | +0.0577 |
-| 29 | 5.5119 | 5.57 (superseded here by 5.75125, see below) | +0.0581 |
+| 29 | 5.5119 | 5.57 (superseded here by 5.751875, see below) | +0.0581 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
@@ -70,7 +70,7 @@ put `s(72)` at 8.55; the direct certificates raise those by 0.08 and 0.06.
 proves `s(26) >= 1377/250 = 5.508` and `s(29) >= 571/100 = 5.71`, past the two
 point certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
 For `n = 29` we have since carried his method further ourselves, to
-`4601/800 = 5.75125`; `n = 26` stands at his 5.508.
+`9203/1600 = 5.751875`; `n = 26` stands at his 5.508.
 
 That work generalizes the basis from point masses to uniform densities on
 axis-aligned rectangles, D4-symmetrized about the centre, so the quantity a
@@ -100,9 +100,10 @@ proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 | `rect_n29_L574375` | 5.74375 | 919/160 | 28.317278 | 29 | 6,821,444 |
 | `rect_n29_L574625` | 5.74625 | 4597/800 | 28.358148 | 29 | 6,734,510 |
 | `rect_n29_L574875` | 5.74875 | 4599/800 | 28.376913 | 29 | 7,091,278 |
-| **`rect_n29_L575125`** | **5.75125** | **4601/800** | **28.414424** | 29 | 7,132,455 |
+| `rect_n29_L575125` | 5.75125 | 4601/800 | 28.414424 | 29 | 7,132,455 |
+| **`rect_n29_L5751875`** | **5.751875** | **9203/1600** | **28.413163** | 29 | 7,326,490 |
 
-The last row is the standing bound: **`s(29) >= 4601/800 = 5.75125`**.
+The last row is the standing bound: **`s(29) >= 9203/1600 = 5.751875`**.
 
 They were produced with tokoharu's solver, driven by `push.py`, the ladder
 driver we contributed to his repository
@@ -112,8 +113,14 @@ merged). Starting from his certified `n = 29` certificate at 5.71, the driver
 raises the side one rung at a time, running his `engine.py` search, then his
 `certify.py`, and keeping a rung only when the certificate is accepted. The
 rungs were 5.73, 5.7325, 5.73375, 5.735, 5.7375, 5.738125, 5.73875, 5.74,
-5.7403125, 5.740625, 5.74125, 5.74375, 5.74625, 5.74875 and 5.75125; every one
-of them was certified before the next was attempted.
+5.7403125, 5.740625, 5.74125, 5.74375, 5.74625, 5.74875, 5.75125 and
+5.751875; every one of them was certified before the next was attempted.
+
+The last rung is smaller than the others because the two attempts above it,
+at 5.75375 and 5.7525, were both rejected by the solver's own LP residual
+check, so the driver halved its step twice, from 1/400 to 1/1600, and the
+rung that then certified advances the bound by 1/1600 rather than 1/400.
+No tolerance was relaxed to obtain it.
 
 ### How the 5.74125 rung was obtained
 
