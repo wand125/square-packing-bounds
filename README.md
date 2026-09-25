@@ -23,7 +23,7 @@ It also contains one certificate of a different kind, a rectangle-density
 certificate in tokoharu's format built here with his solver, proving
 
 ```
-s(29) >= 4599/800 = 5.74875
+s(29) >= 4601/800 = 5.75125
 ```
 
 which supersedes the `n = 29` point certificate above; see
@@ -39,7 +39,7 @@ certificates anyone can re-check.
 | `n` | previously reported | this repository | improvement |
 |---|---|---|---|
 | 26 | 5.3923 | 5.45 (since improved elsewhere, see below) | +0.0577 |
-| 29 | 5.5119 | 5.57 (superseded here by 5.74875, see below) | +0.0581 |
+| 29 | 5.5119 | 5.57 (superseded here by 5.75125, see below) | +0.0581 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
@@ -70,7 +70,7 @@ put `s(72)` at 8.55; the direct certificates raise those by 0.08 and 0.06.
 proves `s(26) >= 1377/250 = 5.508` and `s(29) >= 571/100 = 5.71`, past the two
 point certificates here, and by monotonicity those also carry `n = 27, 30, 31`.
 For `n = 29` we have since carried his method further ourselves, to
-`4599/800 = 5.74875`; `n = 26` stands at his 5.508.
+`4601/800 = 5.75125`; `n = 26` stands at his 5.508.
 
 That work generalizes the basis from point masses to uniform densities on
 axis-aligned rectangles, D4-symmetrized about the centre, so the quantity a
@@ -88,7 +88,7 @@ compiled and run independently, as part of confirming this.
 
 ## s(29): a ladder of rectangle-density certificates built here
 
-`certificates/rect_n29_L*/` holds seven certificates in tokoharu's format, each
+`certificates/rect_n29_L*/` holds eight certificates in tokoharu's format, each
 proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 
 | directory | `L` | exact | total mass | budget | verifier nodes |
@@ -96,9 +96,13 @@ proving a better lower bound on `s(29)` than his own `571/100 = 5.71`:
 | `rect_n29_L574` | 5.74 | 287/50 | 28.307500 | 29 | 6,220,710 |
 | `rect_n29_L57403125` | 5.7403125 | 18369/3200 | 28.312239 | 29 | 6,259,495 |
 | `rect_n29_L5740625` | 5.740625 | 1837/320 | 28.292811 | 29 | 6,801,596 |
-| **`rect_n29_L574125`** | **5.74125** | **4593/800** | **28.900000** | 29 | 4,861,306 |
+| `rect_n29_L574125` | 5.74125 | 4593/800 | 28.900000 | 29 | 4,861,306 |
+| `rect_n29_L574375` | 5.74375 | 919/160 | 28.317278 | 29 | 6,821,444 |
+| `rect_n29_L574625` | 5.74625 | 4597/800 | 28.358148 | 29 | 6,734,510 |
+| `rect_n29_L574875` | 5.74875 | 4599/800 | 28.376913 | 29 | 7,091,278 |
+| **`rect_n29_L575125`** | **5.75125** | **4601/800** | **28.414424** | 29 | 7,132,455 |
 
-The last row is the standing bound: **`s(29) >= 4599/800 = 5.74875`**.
+The last row is the standing bound: **`s(29) >= 4601/800 = 5.75125`**.
 
 They were produced with tokoharu's solver, driven by `push.py`, the ladder
 driver we contributed to his repository
@@ -108,10 +112,10 @@ merged). Starting from his certified `n = 29` certificate at 5.71, the driver
 raises the side one rung at a time, running his `engine.py` search, then his
 `certify.py`, and keeping a rung only when the certificate is accepted. The
 rungs were 5.73, 5.7325, 5.73375, 5.735, 5.7375, 5.738125, 5.73875, 5.74,
-5.7403125 and 5.740625; every one of them was certified before the next was
-attempted.
+5.7403125, 5.740625, 5.74125, 5.74375, 5.74625, 5.74875 and 5.75125; every one
+of them was certified before the next was attempted.
 
-### How the last rung was obtained
+### How the 5.74125 rung was obtained
 
 `5.74125` did not come from the ladder. The search had spent six hours on that
 side without converging: its incumbent sat at mass 28.2747354324, and each
@@ -156,11 +160,11 @@ Each directory holds the data the verifier reads and the verifier itself:
 To re-check one (needs `g++`; a few minutes on four cores):
 
 ```bash
-cd certificates/rect_n29_L574875 && python3 run_verify.py --workers 4
+cd certificates/rect_n29_L575125 && python3 run_verify.py --workers 4
 ```
 
 It ends by writing `verification_summary.json` with `"status": "VERIFIED"`. For
-each of the seven, the `input_sha256` recorded by the accepting run matches the
+each of the eight, the `input_sha256` recorded by the accepting run matches the
 one in its metadata, so the bytes verified are the bytes published. The argument
 behind `verify.cpp` — outward-rounded interval arithmetic, a certified
 inscribed-polygon area for each rectangle overlap, derivative bounds over centre
