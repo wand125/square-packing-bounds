@@ -22,17 +22,19 @@ that also follows from the `n = 39` bound by monotonicity.
 It also contains certificates of a different kind, rectangle-density
 certificates in tokoharu's format built here with his solver, proving
 
+<!-- auto:claims:begin -->
 ```
-s(18) >= 469/100   = 4.69
-s(19) >= 481/100   = 4.81
-s(20) >= 122/25    = 4.88
-s(21) >= 247/50    = 4.94
-s(27) >= 277/50    = 5.54
-s(28) >= 277/50    = 5.54
-s(29) >= 2311/400  = 5.7775
-s(32) >= 291/50    = 5.82
-s(45) >= 2749/400  = 6.8725
+s(18) >= 469/100    = 4.69
+s(19) >= 481/100    = 4.81
+s(20) >= 122/25     = 4.88
+s(21) >= 247/50     = 4.94
+s(27) >= 277/50     = 5.54
+s(28) >= 111/20     = 5.55
+s(29) >= 289/50     = 5.78   (also n = 30, 31)
+s(32) >= 291/50     = 5.82
+s(45) >= 2749/400   = 6.8725
 ```
+<!-- auto:claims:end -->
 
 The `n = 29` certificate supersedes the point certificate above and, by
 monotonicity, also gives `s(30), s(31) >= 5.7775`. See
@@ -42,6 +44,30 @@ and [n = 18 to 28](#n--18-to-28-rectangle-density-certificates-past-the-register
 A further rectangle certificate for `n = 26` reaches a value that
 others already hold. They are included as independent certificates of those
 values; see [Matching certificates](#matching-certificates).
+
+### Standing rectangle certificates
+
+The highest published rectangle certificate for each `n`. The table is
+regenerated on every publication, so it is always current. The sections
+further down explain how the certificates were built and list earlier rungs.
+"previous record" is the best bound held without our rectangle certificates.
+It includes our own point certificates. A certificate also covers every
+larger `n` above its total mass.
+
+<!-- auto:standing:begin -->
+| `n` | bound | exact | total mass | directory | previous record | kind | verifier nodes |
+|---|---|---|---|---|---|---|---|
+| 18 | **4.69** | 469/100 | 17.990000 | `rect_n18_L469` | 4.679000 (jlevy/squares) | record | 12,577,765 |
+| 19 | **4.81** | 481/100 | 18.990000 | `rect_n19_L481` | 4.800000 (jlevy/squares) | record | 10,759,911 |
+| 20 | **4.88** | 122/25 | 19.990000 | `rect_n20_L488` | 4.850000 (jlevy/squares) | record | 7,981,881 |
+| 21 | **4.94** | 247/50 | 20.990000 | `rect_n21_L494` | 4.880000 (jlevy/squares) | record | 8,690,560 |
+| 26 | **5.508** | 1377/250 | 25.990000 | `rect_n26_L5508` | 5.508000 (tokoharu) | match | 19,606,206 |
+| 27 | **5.54** | 277/50 | 26.990000 | `rect_n27_L554` | 5.508000 (tokoharu) | record | 11,903,829 |
+| 28 | **5.55** | 111/20 | 27.990000 | `rect_n28_L555` | 5.511709 (Green) | record | 20,099,199 |
+| 29 | **5.78** | 289/50 | 28.990000 | `rect_n29_L578` | 5.710000 (tokoharu) | record | 7,228,434 |
+| 32 | **5.82** | 291/50 | 31.990000 | `rect_n32_L582` | 5.795832 (Nagamochi) | record | 2,766,145 |
+| 45 | **6.8725** | 2749/400 | 44.990000 | `rect_n45_L68725` | 6.830952 (Nagamochi) | record | 8,174,359 |
+<!-- auto:standing:end -->
 
 The previous figures for these cases come from a private communication from
 Trevor Green to Erich Friedman, reported in Friedman's survey *Packing Unit
