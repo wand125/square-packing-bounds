@@ -1,4 +1,4 @@
-# Lower bounds for packing 19, 20, 21, 26–32, 39, 45, 53, 55, 56, 69, 70 and 72 unit squares
+# Lower bounds for packing 18–21, 26–32, 39, 45, 53, 55, 56, 69, 70 and 72 unit squares
 
 Let `s(n)` be the least side of a square that holds `n` unit squares with
 arbitrary orientations, no two overlapping. This repository contains exact
@@ -23,22 +23,23 @@ It also contains certificates of a different kind, rectangle-density
 certificates in tokoharu's format built here with his solver, proving
 
 ```
+s(18) >= 469/100   = 4.69
 s(19) >= 481/100   = 4.81
 s(20) >= 122/25    = 4.88
-s(21) >= 493/100   = 4.93
+s(21) >= 247/50    = 4.94
 s(27) >= 277/50    = 5.54
 s(28) >= 277/50    = 5.54
 s(29) >= 2311/400  = 5.7775
 s(32) >= 291/50    = 5.82
-s(45) >= 687/100   = 6.87
+s(45) >= 2749/400  = 6.8725
 ```
 
 The `n = 29` certificate supersedes the point certificate above and, by
 monotonicity, also gives `s(30), s(31) >= 5.7775`. See
 [s(29): a ladder of rectangle-density certificates](#s29-a-ladder-of-rectangle-density-certificates-built-here),
 [n = 32 and n = 45](#n--32-and-n--45-rectangle-density-certificates-from-our-own-parents)
-and [n = 19 to 28](#n--19-to-28-rectangle-density-certificates-past-the-register).
-Further rectangle certificates for `n = 18` and `n = 26` reach values that
+and [n = 18 to 28](#n--18-to-28-rectangle-density-certificates-past-the-register).
+A further rectangle certificate for `n = 26` reaches a value that
 others already hold. They are included as independent certificates of those
 values; see [Matching certificates](#matching-certificates).
 
@@ -52,10 +53,10 @@ certificates anyone can re-check.
 | `n` | previously reported | this repository | improvement |
 |---|---|---|---|
 | 26 | 5.3923 | 5.45 (since improved elsewhere, see below) | +0.0577 |
-| 29 | 5.5119 | 5.57 (superseded here by 5.76, see below) | +0.0581 |
+| 29 | 5.5119 | 5.57 (superseded here by 5.7775, see below) | +0.0581 |
 | 32 | 5.7958 | **5.82** (rectangle density, see below) | +0.0242 |
 | 39 | 6.3512 | **6.5** | +0.1488 |
-| 45 | 6.8310 | **6.87** (rectangle density, see below) | +0.0390 |
+| 45 | 6.8310 | **6.8725** (rectangle density, see below) | +0.0415 |
 | 53 | 7.3246 | **7.38** | +0.0554 |
 | 55 | 7.4807 | **7.54** | +0.0593 |
 | 56 | 7.5574 | **7.62** | +0.0626 |
@@ -261,10 +262,11 @@ both was Nagamochi's closed form:
 |---|---|---|---|---|---|---|
 | **`rect_n32_L582`** | **5.82** | **291/50** | 31.990000 | 32 | `1 + sqrt(23)` = 5.795832 | 2,766,145 |
 | `rect_n45_L68525` | 6.8525 | 2741/400 | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 7,443,908 |
-| **`rect_n45_L687`** | **6.87** | **687/100** | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 7,995,368 |
+| `rect_n45_L687` | 6.87 | 687/100 | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 7,995,368 |
+| **`rect_n45_L68725`** | **6.8725** | **2749/400** | 44.990000 | 45 | `1 + sqrt(34)` = 6.830952 | 8,174,359 |
 
 Both beat the previous figure exactly: `(5.82 - 1)^2 = 23.2324 > 23` and
-`(6.87 - 1)^2 = 34.4569 > 34`.
+`(6.8725 - 1)^2 = 34.48625625 > 34`.
 
 **n = 32.** The first rung, 5.80, took its rectangles from the `n = 29`
 certificate at 5.751875 above, scaled to the new side. His LP was solved again
@@ -281,22 +283,24 @@ support. Wall-anchored supports and a coarse full-container fallback were
 added. His LP then optimized from scratch, so no point weight is carried over
 as a rectangle weight. The first rung to certify was 6.84. From there,
 fixed-support rungs as for `n = 29` raised it through 6.8425, 6.845, 6.8475
-and 6.85 to 6.8525, and later in steps of 1/400 to 6.87. Every rung was
+and 6.85 to 6.8525, and later in steps of 1/400 to 6.8725. Every rung was
 scaled to mass `4499/100` and verified before the next was attempted. Only
-6.8525 and 6.87 are published here.
+6.8525, 6.87 and 6.8725 are published here.
 
-## n = 19 to 28: rectangle-density certificates past the register
+## n = 18 to 28: rectangle-density certificates past the register
 
-Five more certificates, in the same format and checked by the same unmodified
+Six more certificates, in the same format and checked by the same unmodified
 verifier, go past the verified lane of the
 [jlevy/squares](https://github.com/jlevy/squares) register (as of its commit
 `db3f5f3`, 2026-09-25):
 
 | directory | `L` | exact | total mass | budget | register, verified lane | verifier nodes |
 |---|---|---|---|---|---|---|
+| **`rect_n18_L469`** | **4.69** | **469/100** | 17.990000 | 18 | 4.679 (jlevy/squares) | 12,577,765 |
 | **`rect_n19_L481`** | **4.81** | **481/100** | 18.990000 | 19 | 4.80 (jlevy/squares) | 10,759,911 |
 | **`rect_n20_L488`** | **4.88** | **122/25** | 19.990000 | 20 | 4.85 (jlevy/squares) | 7,981,881 |
-| **`rect_n21_L493`** | **4.93** | **493/100** | 20.990000 | 21 | 4.88 (jlevy/squares) | 11,243,723 |
+| `rect_n21_L493` | 4.93 | 493/100 | 20.990000 | 21 | 4.88 (jlevy/squares) | 11,243,723 |
+| **`rect_n21_L494`** | **4.94** | **247/50** | 20.990000 | 21 | 4.88 (jlevy/squares) | 8,690,560 |
 | **`rect_n27_L554`** | **5.54** | **277/50** | 26.990000 | 27 | 5.508 (tokoharu, by monotonicity) | 11,903,829 |
 | **`rect_n28_L554`** | **5.54** | **277/50** | 27.990000 | 28 | 5.508 (tokoharu, by monotonicity) | 20,615,178 |
 
@@ -326,9 +330,9 @@ They do not improve any record.
 
 | directory | `L` | exact | total mass | budget | value already held by | verifier nodes |
 |---|---|---|---|---|---|---|
-| `rect_n18_L4679` | 4.679 | 4679/1000 | 17.990000 | 18 | jlevy/squares, point certificate | 9,971,192 |
+| `rect_n18_L4679` | 4.679 | 4679/1000 | 17.990000 | 18 | jlevy/squares, point certificate (now superseded here by 4.69) | 9,971,192 |
 | `rect_n26_L5508` | 5.508 | 1377/250 | 25.990000 | 26 | tokoharu | 19,606,206 |
-| `rect_n21_L488` | 4.88 | 122/25 | 20.990000 | 21 | jlevy/squares (now superseded here by 4.93) | 9,136,007 |
+| `rect_n21_L488` | 4.88 | 122/25 | 20.990000 | 21 | jlevy/squares (now superseded here by 4.94) | 9,136,007 |
 | `rect_n28_L5508` | 5.508 | 1377/250 | 27.990000 | 28 | tokoharu, by monotonicity (now superseded here by 5.54) | 18,949,885 |
 
 The `n = 26` certificate is a direct one for `n = 26`, found independently of
