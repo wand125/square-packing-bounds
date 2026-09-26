@@ -39,7 +39,7 @@ s(43) >= 168/25     = 6.72
 s(44) >= 34/5       = 6.8
 s(45) >= 2753/400   = 6.8825
 s(53) >= 743/100    = 7.43
-s(54) >= 747/100    = 7.47
+s(54) >= 15/2       = 7.5
 ```
 <!-- auto:claims:end -->
 
@@ -79,7 +79,7 @@ larger `n` above its total mass.
 | 44 | **6.8** | 34/5 | 43.990000 | `rect_n44_L68` | 6.744563 (Nagamochi) | record | 8,002,065 |
 | 45 | **6.8825** | 2753/400 | 44.990000 | `rect_n45_L68825` | 6.830952 (Nagamochi) | record | 8,445,252 |
 | 53 | **7.43** | 743/100 | 52.990000 | `rect_n53_L743` | 7.380000 (this work) | record | 8,448,031 |
-| 54 | **7.47** | 747/100 | 53.990000 | `rect_n54_L747` | 7.403124 (Nagamochi) | record | 8,105,539 |
+| 54 | **7.5** | 15/2 | 53.990000 | `rect_n54_L75` | 7.403124 (Nagamochi) | record | 9,252,765 |
 <!-- auto:standing:end -->
 
 The previous figures for these cases come from a private communication from
