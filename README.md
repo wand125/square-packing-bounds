@@ -498,7 +498,15 @@ The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
 explicit boundary-contact argument. Its complete split replay and a fresh
 one-command M1 run have passed. Monotonicity also gives `s(n)=5` for `22..25`.
 Evan Daniel's earlier mixed-measure proof is acknowledged; priority for the
-exact value is not claimed. This is not a proof-assistant formalisation.
+exact value is not claimed. Its reduction from the capture bound to
+`minSide 21 = 5` is checked in Lean 4 ([lean/](point_n21_L5/lean/README.md)); the capture
+computation itself is not formalised.
+
+The [point-only s(45) bundle](point_n45_L7/README.md) proves `s(45)=7` with a D4-invariant
+point measure of total `44.99999100001… < 45`, checked over every position and angle by
+Evan Daniel's unmodified `zmx2` (`VERIFIED-D4`, 4,900 roots, no uncertified box), built from
+the pinned upstream commit by `verify.sh`. His mixed-measure proof of the same value came
+first; this is a separate points-only route.
 The earlier tables and instructions below describe the other certificate
 families; use the endpoint bundle's own reproduction instructions for this proof.
 
