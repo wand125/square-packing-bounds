@@ -2,8 +2,9 @@
 
 **Computer-assisted certificate with a complete rational replay. Both the split
 replay and a fresh one-command M1 run have passed all numerical stages and exact
-assembly. Independent external review and proof-assistant verification are not
-claimed.**
+assembly. Everything except the capture computation is also checked in Lean 4
+(see [lean/](lean/README.md)). Independent external review and a complete
+proof-assistant proof are not claimed.**
 
 This certificate uses 4,604 nonnegative point weights in the side-5 container.
 Its all-pose capture threshold is `q = 249987/250000`, and its total mass is
@@ -51,6 +52,16 @@ This is a separate rational verification route. The repository's older
 `src/verify.py` and its rectangle checkers do not verify this endpoint bundle.
 Successful execution is a computer-assisted check, not a proof-assistant proof
 or an external review.
+
+## Lean reduction
+
+[lean/](lean/README.md) proves `minSide 21 = 5` in Lean 4 from the single
+hypothesis that the checker-domain capture bound holds (the statement the
+rational replay above establishes). The point data, total mass, D4 invariance,
+normalisation, angle sufficiency, scaling argument and grid packing are proved
+in Lean, using only the standard axioms. It builds as an overlay on Evan
+Daniel's unmodified Lean project at the pinned upstream commit:
+`sh lean/build_lean.sh <new directory>`.
 
 The package includes `PUBLICATION.md`, `PROOF-LEMMAS.md`, `FORMAT.md`, the original
 and normalised point data, and `archive-index.json`. The 14 archive parts total
