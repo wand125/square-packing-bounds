@@ -437,6 +437,31 @@ The `n = 26` certificate is a direct one for `n = 26`, found independently of
 tokoharu's. Its last stage fixed a support that had been grown by
 free-rectangle pricing and repaired it at 5.508.
 
+## n = 50: a certificate past Green's bound, checked with its own verifier
+
+[`certificates/mixed_n50_L7318`](certificates/mixed_n50_L7318/README.md) proves
+
+```
+s(50) >= 3659/500 = 7.318
+```
+
+This is above Green's `2√2 + 101/25 + 3√14/25 = 7.3174260…` by more than `0.000573`.
+The measure is 355 rectangles of uniform density with total mass
+`4999999/100000 < 50`. The setting is the same as the rectangle certificates here:
+core side `B = 9977/10000`, and 201 net angles with step `83/40000`.
+
+Every net angle was proved with coverage `>= 1`; the lowest is `1.0000019…`.
+That is below the `1.0001` which tokoharu's `verify.cpp` asks for, so this certificate
+is not in his format and is not listed in the tables above. It was checked instead with
+a research copy of that verifier, which proves coverage `>= 1` over every centre domain.
+The argument rests on `B(1 + 83/40000) < 1`, which puts a net-angle core strictly inside
+every unit square.
+
+The directory has the rational candidate, the checker and the complete 621-file bundle.
+The full replay, the integer axis tables and all 200 oblique angles, was run where the
+certificate was made and again from the published tarball, and both passed. The oblique
+replay uses the same outward-rounded algorithm as the proof, not a second implementation.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
