@@ -69,6 +69,7 @@ s(86) >= 1871/200   = 9.355
 s(88) >= 189/20     = 9.45
 s(89) >= 19/2       = 9.5
 s(91) >= 96123/10000 = 9.6123
+s(94) >= 1959/200   = 9.795
 ```
 <!-- auto:claims:end -->
 
@@ -141,6 +142,7 @@ larger `n` above its total mass.
 | 88 | **9.45** | 189/20 | 87.990000 | `rect_n88_L945` | 9.426150 (Nagamochi) | record | 25,894,800 |
 | 89 | **9.5** | 19/2 | 88.990000 | `rect_n89_L95` | 9.485281 (Nagamochi) | record | 23,056,489 |
 | 91 | **9.6123** | 96123/10000 | 90.990000 | `rect_n91_L96123` | 9.602325 (Nagamochi) | record | 26,273,880 |
+| 94 | **9.795** | 1959/200 | 93.990000 | `rect_n94_L9795` | 9.774964 (Nagamochi) | record | 30,426,378 |
 <!-- auto:standing:end -->
 
 The previous figures for these cases come from a private communication from
