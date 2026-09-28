@@ -1,6 +1,6 @@
 # A point-only computational certificate for s(21) = 5
 
-Publication draft — the relocated split replay and exact assembly have succeeded; the public one-command run remains in progress. This file is not an announcement of a published proof.
+The relocated split replay and a fresh one-command M1 run have passed all numerical stages and exact assembly. This is a computer-assisted certificate, with no claim of independent external review or proof-assistant verification.
 
 Let s(n) be the infimum of side lengths of square containers holding n closed unit squares with arbitrary independent rotations and pairwise disjoint interiors. Boundary contact is allowed.
 
@@ -38,15 +38,15 @@ The final assembly checks the exact root grid, stage-to-stage pending-region ide
 
 ## Reproduction status
 
-Fresh root and sieve replays in a relocated frozen tree have completed and match the original proof objects. All six Intel frontier workers exited zero, replaying all 31,678 required parents. Exact assembly completed with `PORTABLE_COMPLETE_REPLAY_LINKAGE`, including the full stage linkage and strict mass gap. The public one-command runner is executing from scratch on M1 with two workers; root and sieve have exited zero and frontier replay is pending.
+Fresh root and sieve replays in a relocated frozen tree have completed and match the original proof objects. All six Intel frontier workers exited zero, replaying all 31,678 required parents. Exact assembly completed with `PORTABLE_COMPLETE_REPLAY_LINKAGE`, including the full stage linkage and strict mass gap. The one-command runner then completed from scratch on M1 with two workers in 8,577.313 seconds. Root, sieve and both frontier processes exited zero, followed by `FRESH_ALL_DOMAIN_REPLAY_VERIFIED`. Its result, complete linkage and collection checks are recorded under `acceptance/`.
 
-The byte-preserving distribution contains 75,130 input files. Its gzip archive is 463,568,316 bytes in 14 parts. A complete extraction verified every file against manifest SHA256 `bb2883c5d05e3073011267f95cccd3301c2f97dd4c1e1d64fc4c6e46c8ec9c6c`. Packaging does not itself perform a mathematical replay. A successful one-command run and its measured elapsed time must still be recorded before publication.
+The byte-preserving distribution contains 75,130 input files. Its gzip archive is 463,568,316 bytes in 14 parts. A complete extraction verified every file against manifest SHA256 `bb2883c5d05e3073011267f95cccd3301c2f97dd4c1e1d64fc4c6e46c8ec9c6c`. Packaging does not itself perform a mathematical replay. The M1 numerical run used the original frozen bundle; all 75,130 actual source reads were checked against the trimmed distribution manifest and bytes. A separate extraction checked the compressed distribution. A second full numerical run starting from the compressed parts was not timed; the reader can perform it with the provided commands.
 
 ## Mathematical appendix and checker source
 
 [PROOF-LEMMAS.md](PROOF-LEMMAS.md) gives the local containment, physical-wall, exact-dual-residual, conflict, branch, weight-transfer, fixed-angle, near-axis and closed-partition arguments. `lemma-code-map.json` pins the 23 named source files in the frozen tree. The appendix is a written mathematical review, not a proof-assistant certificate.
 
-First run `python unpack_bundle.py` to reconstruct and hash-check the bundle. Readable copies of all bundled Python sources are in `verifier-source/`. Then the full command is `python verify_portable.py --workers 2 --out /tmp/n21-proof-replay`. It must use a new output directory and must finish with all numerical stages exiting zero and `FRESH_ALL_DOMAIN_REPLAY_VERIFIED` after complete assembly. Its end-to-end positive run is still pending. Python 3.12.2 with NumPy 2.5.3 and SciPy 1.18.1 is the tested local environment; `requirements-tested.txt` records these package versions. These are tested versions, not claims about minimum versions.
+First run `python unpack_bundle.py` to reconstruct and hash-check the bundle. Readable copies of all bundled Python sources are in `verifier-source/`. Then the full command is `python verify_portable.py --workers 2 --out /tmp/n21-proof-replay`. It must use a new output directory and must finish with all numerical stages exiting zero and `FRESH_ALL_DOMAIN_REPLAY_VERIFIED` after complete assembly. The completed M1 run and measured time are recorded above. Python 3.12.2 with NumPy 2.5.3 and SciPy 1.18.1 is the tested local environment; `requirements-tested.txt` records these package versions. These are tested versions, not claims about minimum versions.
 
 The worker count is configurable; reducing it changes scheduling, not the required set of 31,678 parents. Running only representative parents is a diagnostic and cannot return the full runner's accepted status.
 

@@ -1,8 +1,9 @@
 # Point-only endpoint certificate for s(21) = 5
 
-**Unpublished staging draft. The complete split replay and distribution integrity
-checks have passed. The public one-command run is still in progress on M1.
-Publication remains pending its successful completion.**
+**Computer-assisted certificate with a complete rational replay. Both the split
+replay and a fresh one-command M1 run have passed all numerical stages and exact
+assembly. Independent external review and proof-assistant verification are not
+claimed.**
 
 This certificate uses 4,604 nonnegative point weights in the side-5 container.
 Its all-pose capture threshold is `q = 249987/250000`, and its total mass is
@@ -62,6 +63,14 @@ All Python files from the bundle are also readable under `verifier-source/`.
 The unpacker checks these copies against the extracted sources. The numerical
 runner uses the extracted `bundle/`. Do not edit either copy before replay.
 
-The full split replay and exact assembly have succeeded. Acceptance records for
-the public one-command run will be added after it finishes; this draft does not
-claim that end-to-end success yet.
+The complete one-command run took 8,577.3 seconds (about 2 hours 23 minutes) on
+an M1 with two workers. All four numerical stage processes exited zero, and
+exact assembly returned `FRESH_ALL_DOMAIN_REPLAY_VERIFIED`. See
+[acceptance/README.md](acceptance/README.md) for the complete records.
+
+That run used the original frozen bundle. Every one of its 75,130 actual input
+reads is preserved byte-for-byte in this smaller distribution, and a separate
+archive extraction checked every distributed file. We distinguish that
+packaging check from numerical replay; a full run starting from these compressed
+parts was not separately timed. The commands above reproduce the same numerical
+verification from the distributed inputs.

@@ -12,7 +12,18 @@ run. The distribution records describe byte-preserving copying and an actual
 archive extraction with all input hashes checked. These packaging records do
 not perform mathematical verification.
 
-The separate M1 public one-command run is still pending. Its acceptance record
-will be included before publication. No completion of that run is claimed here.
+`m1-full-replay.json` records the successful one-command M1 run: four numerical
+processes exited zero, and full assembly accepted all required regions in
+8,577.313 seconds with two frontier workers. `m1-full-linkage.json.gz` retains
+the complete linkage record without changing its decompressed bytes.
+`m1-collection-check.json` records verification of all 45,446 output bindings
+and 75,130 source inputs after transfer.
+
+`m1-distribution-binding.json` checks that every actual input read by that run
+is present byte-for-byte in the trimmed distribution. The numerical run used
+the original frozen bundle; packaging and extraction were checked separately.
+The compressed/decompressed linkage SHA256 values are in this binding record.
+Historical absolute paths identify the original run and are not required paths
+for reproduction.
 Use `verify_portable.py` for a fresh complete numerical check; do not treat these
 historical JSON records as a substitute for executing the checker.
