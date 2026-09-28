@@ -445,6 +445,17 @@ free-rectangle pricing and repaired it at 5.508.
 
 ## n = 50: certificates past Green's bound, checked with their own verifiers
 
+[`certificates/mixed_n50_L740`](certificates/mixed_n50_L740/README.md) proves
+
+```
+s(50) >= 37/5 = 7.4
+```
+
+This is above Green's `7.3174260…` by more than `0.0825`. The measure is 553 uniform-density rectangles
+with total mass `4999999/100000`, built directly at L = 7.4. Every net angle has coverage `>= 1`, and
+the lowest is `1.0000000004…`. It uses the same verifier as `mixed_n50_L7318`. The full 201-angle replay
+was run again from the published tarball before publication. It supersedes the two certificates below.
+
 [`certificates/mixed_n50_L735`](certificates/mixed_n50_L735/README.md) proves
 
 ```
