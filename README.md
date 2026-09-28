@@ -439,7 +439,19 @@ The `n = 26` certificate is a direct one for `n = 26`, found independently of
 tokoharu's. Its last stage fixed a support that had been grown by
 free-rectangle pricing and repaired it at 5.508.
 
-## n = 50: a certificate past Green's bound, checked with its own verifier
+## n = 50: certificates past Green's bound, checked with their own verifiers
+
+[`certificates/mixed_n50_L735`](certificates/mixed_n50_L735/README.md) proves
+
+```
+s(50) >= 147/20 = 7.35
+```
+
+This is above Green's `7.3174260…` by more than `0.0325`. The measure is 499 uniform-density
+rectangles with total mass `4999999/100000`. Every net angle has coverage `>= 1`; the lowest is
+`1.0000000005…`. It was checked with the verifier shipped in its bundle, and the audit and the
+full 201-angle replay were run again from the published tarball before publication. It
+supersedes the earlier certificate below.
 
 [`certificates/mixed_n50_L7318`](certificates/mixed_n50_L7318/README.md) proves
 
