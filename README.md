@@ -438,6 +438,16 @@ The `n = 26` certificate is a direct one for `n = 26`, found independently of
 tokoharu's. Its last stage fixed a support that had been grown by
 free-rectangle pricing and repaired it at 5.508.
 
+## Closed-square endpoint certificate for n = 21 (staging draft)
+
+A separate [point-only endpoint bundle](point_n21_L5/README.md) is being prepared
+for `s(21)=5`, with a rational all-position, all-angle checker and an explicit
+boundary-contact argument. Its complete relocated replay is still in progress;
+this staging section is not an announcement of a verified public bundle.
+Evan Daniel's previously published mixed-measure proof is acknowledged there.
+The verification instructions below apply to the earlier certificates, not to
+this endpoint bundle.
+
 ## How the proof works
 
 Scatter finitely many points in the container and give each a nonnegative
