@@ -489,6 +489,21 @@ The full replay, the integer axis tables and all 200 oblique angles, was run whe
 certificate was made and again from the published tarball, and both passed. The oblique
 replay uses the same outward-rounded algorithm as the proof, not a second implementation.
 
+## n = 65: a certificate past Green's bound
+
+[`certificates/mixed_n65_L835`](certificates/mixed_n65_L835/README.md) proves
+
+```
+s(65) >= 167/20 = 8.35
+```
+
+This is above Green's `2√2 + 71/13 = 8.2899658…` by more than `0.0600`. The measure is 787
+uniform-density rectangles with total mass `6499999/100000`. It was obtained by contracting a
+search state at L = 8.40 exactly by `167/168`, then repairing it against counterexamples on the
+full net. Every net angle has coverage `>= 1`, and the lowest is `1.0000000004…`. It uses the same
+verifier as the n = 50 certificates above. The full 201-angle replay was run again from the
+published tarball before publication.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
