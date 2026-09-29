@@ -62,5 +62,6 @@ exactly the three standard axioms. It ends with `LEAN_OVERLAY_BUILD_VERIFIED`.
 A fresh run from an empty directory on an Apple M4 took about 24 minutes and
 about 8 GB of disk, mostly the Mathlib checkout and cache.
 
-This is not a complete formal proof: the capture hypothesis is discharged by
-the computer-assisted rational replay described in `../README.md`.
+This reduction alone is not a complete formal proof. The capture hypothesis is
+discharged by the rational replay described in `../README.md`, and, inside Lean,
+by the hypothesis-free proof in [zero-margin/](zero-margin/README.md).

@@ -498,9 +498,9 @@ The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
 explicit boundary-contact argument. Its complete split replay and a fresh
 one-command M1 run have passed. Monotonicity also gives `s(n)=5` for `22..25`.
 Evan Daniel's earlier mixed-measure proof is acknowledged; priority for the
-exact value is not claimed. Its reduction from the capture bound to
-`minSide 21 = 5` is checked in Lean 4 ([lean/](point_n21_L5/lean/README.md)); the capture
-computation itself is not formalised.
+exact value is not claimed. The same certificate also gives a hypothesis-free Lean 4
+proof of `minSide 21 = 5`, kernel-checked through Evan Daniel's zero-margin box tree with only
+the standard axioms ([lean/zero-margin/](point_n21_L5/lean/zero-margin/README.md)).
 
 The [point-only s(45) bundle](point_n45_L7/README.md) proves `s(45)=7` with a D4-invariant
 point measure of total `44.99999100001… < 45`, checked over every position and angle by

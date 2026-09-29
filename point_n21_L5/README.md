@@ -2,9 +2,10 @@
 
 **Computer-assisted certificate with a complete rational replay. Both the split
 replay and a fresh one-command M1 run have passed all numerical stages and exact
-assembly. Everything except the capture computation is also checked in Lean 4
-(see [lean/](lean/README.md)). Independent external review and a complete
-proof-assistant proof are not claimed.**
+assembly. The same certificate is also proved in Lean 4 with no hypothesis:
+`minSide 21 = 5` is kernel-checked from Evan Daniel's zero-margin box tree,
+using only the standard axioms (see [lean/zero-margin/](lean/zero-margin/README.md)).
+Independent external review is not claimed.**
 
 This certificate uses 4,604 nonnegative point weights in the side-5 container.
 Its all-pose capture threshold is `q = 249987/250000`, and its total mass is
