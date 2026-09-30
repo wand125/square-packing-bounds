@@ -506,6 +506,21 @@ full net. Every net angle has coverage `>= 1`, and the lowest is `1.0000000004�
 verifier as the n = 50 certificates above. The full 201-angle replay was run again from the
 published tarball before publication.
 
+## n = 37: a certificate past Green's bound
+
+[`certificates/mixed_n37_L644`](certificates/mixed_n37_L644/README.md) proves
+
+```
+s(37) >= 161/25 = 6.44
+```
+
+This is above Green's `2√2 + (113 + 10√3)/37 = 6.3506030…` by more than `0.0893`, and above the
+rectangle certificate `rect_n37_L6425`. The measure is 350 uniform-density rectangles with total
+mass `3699999/100000`, generated directly at L = 6.44 and repaired on the full net. Every net angle
+has coverage `>= 1`, and the lowest is `1.0000000054…`. It uses the same verifier as the n = 50 and
+n = 65 certificates. The full 201-angle replay was run again from the published tarball before
+publication.
+
 ## n = 87: a certificate past Nagamochi's bound
 
 [`certificates/mixed_n87_L939`](certificates/mixed_n87_L939/README.md) proves
