@@ -520,6 +520,12 @@ point measure of total `44.99999100001… < 45`, checked over every position and
 Evan Daniel's unmodified `zmx2` (`VERIFIED-D4`, 4,900 roots, no uncertified box), built from
 the pinned upstream commit by `verify.sh`. His mixed-measure proof of the same value came
 first; this is a separate points-only route.
+
+The [point-only s(61) bundle](point_n61_L8/README.md) proves `s(61)=8` with a D4-invariant
+point measure of total `60.99998780001… < 61`, checked the same way (`VERIFIED-D4`, 6,400
+roots, no uncertified box). It was lifted from the s(45) cover by inserting a central band
+in each direction and adding mass on the cross bands. `s(61)=8` also follows from Evan
+Daniel's earlier mixed-measure proof of `s(60)=8`; this is a separate points-only route.
 The earlier tables and instructions below describe the other certificate
 families; use the endpoint bundle's own reproduction instructions for this proof.
 
