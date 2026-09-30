@@ -16,8 +16,9 @@ for [`mixed_n50_L740`](../mixed_n50_L740/README.md) and [`mixed_n65_L835`](../mi
 
 The candidate was obtained from the published n = 86 certificate
 [`rect_n86_L9365`](../rect_n86_L9365/): its measure was read with the n = 87 budget and stretched to
-L = 9.39 with the walls kept in place (the interior is stretched, the wall bands are not), then
-repaired against counterexamples on the full net. Certificates at L = 9.38 and 9.385 obtained the
+L = 9.39 by a "central" stretch (the band within distance 1 of each wall is kept in place, and the
+interior is stretched by a smooth power-2 map that stretches most at the centre, with the weights
+corrected by the local area ratio), then repaired against counterexamples on the full net. Certificates at L = 9.38 and 9.385 obtained the
 same way are implied by this one and are not published separately.
 
 ## Argument

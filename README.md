@@ -516,8 +516,8 @@ s(87) >= 939/100 = 9.39
 
 This is above Nagamochi's `1 + √70 = 9.3666002…` by more than `0.0233`. The measure is 659
 uniform-density rectangles with total mass `8699999/100000`. It was obtained from the n = 86
-certificate `rect_n86_L9365`, read with the n = 87 budget and stretched to L = 9.39 with the wall
-bands kept in place, then repaired on the full net. Every net angle has coverage `>= 1`, and the
+certificate `rect_n86_L9365`, read with the n = 87 budget and stretched to L = 9.39 by a central
+stretch that keeps the wall bands in place, then repaired on the full net. Every net angle has coverage `>= 1`, and the
 lowest is `1.0000000058…`. It uses the same verifier as the n = 50 and n = 65 certificates above.
 The full 201-angle replay was run again from the published tarball before publication.
 
