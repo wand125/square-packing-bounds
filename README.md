@@ -524,6 +524,22 @@ has coverage `>= 1`, and the lowest is `1.0000000054…`. It uses the same verif
 n = 65 certificates. The full 201-angle replay was run again from the published tarball before
 publication.
 
+## n = 59: s(59) = 8, the k = 8 case of the k² − 5 series
+
+[`certificates/k2m5_n59_L8`](certificates/k2m5_n59_L8/README.md) proves
+
+```
+s(59) = 8
+```
+
+(the previous lower bound was 7.93). The cover follows Evan Daniel's line-cover method for s(60) = 8
+([evand/square-packing](https://github.com/evand/square-packing), MIT): his LP, format and checkers, with
+his s(60) cover as the warm start. It has 26,308 points and 5,240 segments of length 1/50 on the interior
+lattice lines, total `1474762899/25000000 = 58.99051596 < 59`, and is exactly D4-invariant. Evan
+Daniel's checkers, pinned to an upstream commit by `verify.sh`, accept it: `zmx2 --d4` (6,400 roots),
+`zmx2 --full` (51,200 roots, no symmetry), and `zm_mixed --d4 --cert-mode` (102,400 roots at depth 24,
+with the single remaining root rerun at depth 34). It has not been reviewed outside this project.
+
 ## n = 77: s(77) = 9, the k = 9 case of the k² − 4 series
 
 [`certificates/k2m4_n77_L9`](certificates/k2m4_n77_L9/README.md) proves
