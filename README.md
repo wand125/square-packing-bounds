@@ -524,6 +524,22 @@ has coverage `>= 1`, and the lowest is `1.0000000054…`. It uses the same verif
 n = 65 certificates. The full 201-angle replay was run again from the published tarball before
 publication.
 
+## n = 77: s(77) = 9, the k = 9 case of the k² − 4 series
+
+[`certificates/k2m4_n77_L9`](certificates/k2m4_n77_L9/README.md) proves
+
+```
+s(77) = 9
+```
+
+(and, by monotonicity, s(78) = 9, already known from Evan Daniel's k² − 3 series). It extends Evan
+Daniel's mixed cover for s(60) = 8 ([evand/square-packing](https://github.com/evand/square-packing), MIT)
+to the 9 × 9 container by inserting a central band and adding a D4-symmetric band measure; the total
+mass is `76.999984600031… < 77`. The cover is checked with Evan Daniel's own checkers, pinned to an
+upstream commit by `verify.sh`: `zmx2 --d4` (8,100 roots), `zmx2 --full` (64,800 roots, no symmetry)
+and `zm_mixed --d4 --cert-mode` (129,600 roots, rational arithmetic), all with no uncertified root.
+It has not been reviewed outside this project.
+
 ## n = 66: a structured certificate past the rectangle ladder
 
 [`certificates/mixed_n66_L842`](certificates/mixed_n66_L842/README.md) proves
