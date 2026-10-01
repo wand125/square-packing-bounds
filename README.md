@@ -522,6 +522,21 @@ has coverage `>= 1`, and the lowest is `1.0000000054…`. It uses the same verif
 n = 65 certificates. The full 201-angle replay was run again from the published tarball before
 publication.
 
+## n = 66: a structured certificate past the rectangle ladder
+
+[`certificates/mixed_n66_L842`](certificates/mixed_n66_L842/README.md) proves
+
+```
+s(66) >= 421/50 = 8.42
+```
+
+This is above the rectangle certificate `rect_n66_L8385` (8.385) by `0.035`. The measure is 631
+uniform-density rectangles with total mass `6599999/100000`, built from scratch at L = 8.42 from a
+structured initial measure (bands at integer distances from the walls, as in the Green-series
+certificates) and repaired on the full net. Every net angle has coverage `>= 1`, and the lowest is
+`1.0000000009…`. It uses the same verifier as the n = 50 and n = 65 certificates. The full 201-angle
+replay was run again from the published tarball before publication.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
