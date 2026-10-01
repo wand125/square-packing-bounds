@@ -520,7 +520,20 @@ has coverage `>= 1`, and the lowest is `1.0000000054…`. It uses the same verif
 n = 65 certificates. The full 201-angle replay was run again from the published tarball before
 publication.
 
-## n = 87: a certificate past Nagamochi's bound
+## n = 87, 90, 92: certificates past Nagamochi's bound
+
+| certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
+|---|---|---|---|---:|---|
+| [`mixed_n87_L940`](certificates/mixed_n87_L940/README.md) | `s(87) >= 47/5 = 9.40` | `1 + √70 = 9.3666…` | 9.39 | 634 | `1.0000000235` |
+| [`mixed_n90_L960`](certificates/mixed_n90_L960/README.md) | `s(90) >= 48/5 = 9.60` | `1 + √73 = 9.5440…` | 9.5675 | 762 | `1.000000000042` |
+| [`mixed_n92_L969`](certificates/mixed_n92_L969/README.md) | `s(92) >= 969/100 = 9.69` | `1 + √75 = 9.6603…` | 9.645 | 832 | `1.0000000034` |
+
+Each was obtained from the published certificate for `n − 1` (`rect_n86_L9365`, `rect_n89_L9565`,
+`rect_n91_L9645`), read with the budget of `n`, stretched with the walls' bands kept in place
+(a central stretch for n = 87, the wall variant for n = 90 and 92), and repaired on the full net.
+They use the same verifier as the n = 50 and n = 65 certificates above, and each full 201-angle
+replay was run again from the published tarball before publication. The n = 87 certificate
+supersedes the earlier one below.
 
 [`certificates/mixed_n87_L939`](certificates/mixed_n87_L939/README.md) proves
 
