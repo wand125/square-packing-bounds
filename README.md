@@ -637,6 +637,21 @@ stretch that keeps the wall bands in place, then repaired on the full net. Every
 lowest is `1.0000000058…`. It uses the same verifier as the n = 50 and n = 65 certificates above.
 The full 201-angle replay was run again from the published tarball before publication.
 
+## n = 96: a certificate past Nagamochi's closed form
+
+[`certificates/mixed_n96_L992`](certificates/mixed_n96_L992/README.md) proves
+
+```
+s(96) >= 248/25 = 9.92
+```
+
+This is above Nagamochi's closed form `1 + √79 = 9.8882…` (a reference value: the score lemma behind it is
+false, see jlevy/squares#295) by `0.0318`, and above our rectangle bound 9.8518 for n = 96. The measure is 195
+uniform-density rectangles with total mass `9599999/100000`, built from scratch from a structured initial
+measure and repaired on the full net. Every net angle has coverage `>= 1`; the lowest is `1.0000000004…`. It
+uses the same verifier as the n = 84 and 85 certificates. Before publication the full 201-angle replay was run
+again from the published tarball on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
