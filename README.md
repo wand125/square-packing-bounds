@@ -588,6 +588,20 @@ measure and repaired on the full net. Every net angle has coverage `>= 1`; the l
 `1.0000000008…` and `1.0000000017…`. They use the same verifier as the n = 50, 65 and 66 certificates.
 The full 201-angle replay was run again from each published tarball before publication.
 
+## n = 101: a linear certificate past Green's bound
+
+[`certificates/mixed_n101_L1028`](certificates/mixed_n101_L1028/README.md) proves
+
+```
+s(101) >= 257/25 = 10.28
+```
+
+This is above Green's reported bound for `k = 10` (Friedman DS7, Theorem 9),
+`2√2 − 1 + (810 + 18√5)/101 = 10.2467…`, by more than `0.0332`. The measure is linear: 333 point masses,
+897 segments and 4 rectangles, total mass `10099999/100000`, checked at all 201 net angles with the verifier of
+`mixed_n50_L735` (`unified_linear_verify.cpp`). The full replay was run again from the published tarball before
+publication.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
