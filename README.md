@@ -623,6 +623,20 @@ measure is linear (86 point masses, 222 segments and 774 rectangles, total mass 
 net angles with the verifier of `mixed_n101_L1028` (`unified_linear_verify.cpp`). The full replay was run again from
 the published tarball before publication.
 
+## n = 82: a linear certificate past Green's bound
+
+[`certificates/mixed_n82_L932`](certificates/mixed_n82_L932/README.md) proves
+
+```
+s(82) >= 233/25 = 9.32
+```
+
+This is above Green's reported bound `2√2 + (247 + 12√2)/41 = 9.2667…` for n = 82 by more than `0.0532`; with the
+n = 83, 84 and 85 certificates above, every n in 82–85 now has a verified bound past Green's value. The measure is linear
+(86 point masses, 222 segments and 774 rectangles, total mass `8199999/100000`), checked at all 201 net angles with the
+verifier of `mixed_n83_L935`. Before publication the full replay was run again from the published tarball on a fresh
+Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
