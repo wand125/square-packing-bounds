@@ -650,6 +650,19 @@ the full net, with the same verifier as the n = 84 and 85 certificates. By monot
 and `s(93) >= 9.75`. Before publication each full 201-angle replay was run again from its tarball on a fresh Ubuntu 24.04
 machine with only the README's requirements installed.
 
+## n = 83: a certificate past the linear one above
+
+[`certificates/mixed_n83_L937`](certificates/mixed_n83_L937/README.md) proves
+
+```
+s(83) >= 937/100 = 9.37
+```
+
+This supersedes the linear certificate `mixed_n83_L935` (9.35). It is a rectangle density built from scratch from a
+structured initial measure and repaired on the full net, with the same verifier as the n = 84 and 85 certificates.
+Before publication the full 201-angle replay was run again from the bundle on a fresh Ubuntu 24.04 machine with only
+the README's requirements installed.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
