@@ -691,6 +691,18 @@ stretch that keeps the wall bands in place, then repaired on the full net. Every
 lowest is `1.0000000058…`. It uses the same verifier as the n = 50 and n = 65 certificates above.
 The full 201-angle replay was run again from the published tarball before publication.
 
+## n = 96: 9.96, superseding 9.92
+
+[`certificates/mixed_n96_L996`](certificates/mixed_n96_L996/README.md) proves
+
+```
+s(96) >= 249/25 = 9.96
+```
+
+This supersedes `mixed_n96_L992` below; the gap to the best known packing (side 10) is now `0.04`. Built from scratch
+from a structured initial measure and repaired on the full net, with the same verifier; the pre-publication replay was
+run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## n = 96: a certificate past Nagamochi's closed form
 
 [`certificates/mixed_n96_L992`](certificates/mixed_n96_L992/README.md) proves
