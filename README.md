@@ -616,6 +616,19 @@ This is above Green's reported bound for `k = 10` (Friedman DS7, Theorem 9),
 `mixed_n50_L735` (`unified_linear_verify.cpp`). The full replay was run again from the published tarball before
 publication.
 
+## n = 83: a linear certificate past Green's bound
+
+[`certificates/mixed_n83_L935`](certificates/mixed_n83_L935/README.md) proves
+
+```
+s(83) >= 187/20 = 9.35
+```
+
+This is above Green's reported bound `2√2 + (247 + 12√2)/41 = 9.2667…` for n = 82–85 by more than `0.0833`. The
+measure is linear (86 point masses, 222 segments and 774 rectangles, total mass `8299999/100000`), checked at all 201
+net angles with the verifier of `mixed_n101_L1028` (`unified_linear_verify.cpp`). The full replay was run again from
+the published tarball before publication.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
