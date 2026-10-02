@@ -571,6 +571,23 @@ certificates) and repaired on the full net. Every net angle has coverage `>= 1`,
 `1.0000000009…`. It uses the same verifier as the n = 50 and n = 65 certificates. The full 201-angle
 replay was run again from the published tarball before publication.
 
+## n = 84, 85: certificates past Green's bound
+
+[`certificates/mixed_n84_L940`](certificates/mixed_n84_L940/README.md) and
+[`certificates/mixed_n85_L942`](certificates/mixed_n85_L942/README.md) prove
+
+```
+s(84) >= 47/5 = 9.4
+s(85) >= 471/50 = 9.42
+```
+
+Both are above Green's reported bound `2√2 + (247 + 12√2)/41 = 9.2667…` for n = 82–85 (Friedman DS7,
+Theorem 9 with k = 9), by `0.133` and `0.153`. The measures are 661 and 587 uniform-density rectangles
+with total masses `8399999/100000` and `8499999/100000`, built from scratch from a structured initial
+measure and repaired on the full net. Every net angle has coverage `>= 1`; the lowest are
+`1.0000000008…` and `1.0000000017…`. They use the same verifier as the n = 50, 65 and 66 certificates.
+The full 201-angle replay was run again from each published tarball before publication.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
