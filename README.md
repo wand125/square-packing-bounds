@@ -637,6 +637,19 @@ n = 83, 84 and 85 certificates above, every n in 82–85 now has a verified boun
 verifier of `mixed_n83_L935`. Before publication the full replay was run again from the published tarball on a fresh
 Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 87, 91, 92: Green-series certificates
+
+| certificate | bound | previous value here | Nagamochi's closed form (reference) |
+|---|---|---|---|
+| [`mixed_n87_L948`](certificates/mixed_n87_L948/README.md) | `s(87) >= 237/25 = 9.48` | 9.46 (from n = 85) | `1 + √70 = 9.3666…` |
+| [`mixed_n91_L970`](certificates/mixed_n91_L970/README.md) | `s(91) >= 97/10 = 9.70` | 9.645 | `1 + √74 = 9.6023…` |
+| [`mixed_n92_L975`](certificates/mixed_n92_L975/README.md) | `s(92) >= 39/4 = 9.75` | 9.69 | `1 + √75 = 9.6603…` |
+
+Each was built from scratch from a structured initial measure (bands at integer distances from the walls) and repaired on
+the full net, with the same verifier as the n = 84 and 85 certificates. By monotonicity they also give `s(88) >= 9.48`
+and `s(93) >= 9.75`. Before publication each full 201-angle replay was run again from its tarball on a fresh Ubuntu 24.04
+machine with only the README's requirements installed.
+
 ## n = 87, 90, 92: certificates past Nagamochi's bound
 
 | certificate | bound | Nagamochi's closed form | previous value here | rectangles | lowest coverage |
