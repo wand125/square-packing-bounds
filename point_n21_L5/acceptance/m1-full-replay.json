@@ -13,13 +13,13 @@
       "stage": "root",
       "shard": null,
       "argv": [
-        "/Users/Hosono_1/SquarePacking/.venv/bin/python",
+        ".venv/bin/python",
         "-u",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
+        "runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
         "--stage",
         "root",
         "--out",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/root"
+        "runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/root"
       ],
       "exit_code": 0,
       "seconds": 139.45580649998737
@@ -28,13 +28,13 @@
       "stage": "sieve",
       "shard": null,
       "argv": [
-        "/Users/Hosono_1/SquarePacking/.venv/bin/python",
+        ".venv/bin/python",
         "-u",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
+        "runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
         "--stage",
         "sieve",
         "--out",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/sieve"
+        "runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/sieve"
       ],
       "exit_code": 0,
       "seconds": 412.11077858298086
@@ -43,13 +43,13 @@
       "stage": "frontier",
       "shard": 0,
       "argv": [
-        "/Users/Hosono_1/SquarePacking/.venv/bin/python",
+        ".venv/bin/python",
         "-u",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
+        "runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
         "--stage",
         "frontier",
         "--out",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/frontier-s0",
+        "runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/frontier-s0",
         "--shard",
         "0",
         "--shards",
@@ -62,13 +62,13 @@
       "stage": "frontier",
       "shard": 1,
       "argv": [
-        "/Users/Hosono_1/SquarePacking/.venv/bin/python",
+        ".venv/bin/python",
         "-u",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
+        "runs/n21_L5_portable_codexb_trial/bundle/portable_replay.py",
         "--stage",
         "frontier",
         "--out",
-        "/Users/Hosono_1/SquarePacking/runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/frontier-s1",
+        "runs/n21_L5_portable_codexb_trial/results/n21_L5_portable_codexb_trial/replay/frontier-s1",
         "--shard",
         "1",
         "--shards",

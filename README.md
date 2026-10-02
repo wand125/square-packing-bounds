@@ -456,8 +456,8 @@ s(50) >= 37/5 = 7.4
 
 This is above Green's `7.3174260…` by more than `0.0825`. The measure is 553 uniform-density rectangles
 with total mass `4999999/100000`, built directly at L = 7.4. Every net angle has coverage `>= 1`, and
-the lowest is `1.0000000004…`. It uses the same verifier as `mixed_n50_L7318`. The full 201-angle replay
-was run again from the published tarball before publication. It supersedes the two certificates below.
+the lowest is `1.0000000004…`. It uses the same verifier as `mixed_n65_L835`. The full 201-angle replay
+was run again from the published tarball before publication. It supersedes the certificate below.
 
 [`certificates/mixed_n50_L735`](certificates/mixed_n50_L735/README.md) proves
 
@@ -468,31 +468,11 @@ s(50) >= 147/20 = 7.35
 This is above Green's `7.3174260…` by more than `0.0325`. The measure is 499 uniform-density
 rectangles with total mass `4999999/100000`. Every net angle has coverage `>= 1`; the lowest is
 `1.0000000005…`. It was checked with the verifier shipped in its bundle, and the audit and the
-full 201-angle replay were run again from the published tarball before publication. It
-supersedes the earlier certificate below.
+full 201-angle replay were run again from the published tarball before publication.
 
-[`certificates/mixed_n50_L7318`](certificates/mixed_n50_L7318/README.md) proves
-
-```
-s(50) >= 3659/500 = 7.318
-```
-
-This is above Green's `2√2 + 101/25 + 3√14/25 = 7.3174260…` by more than `0.000573`.
-The measure is 355 rectangles of uniform density with total mass
-`4999999/100000 < 50`. The setting is the same as the rectangle certificates here:
-core side `B = 9977/10000`, and 201 net angles with step `83/40000`.
-
-Every net angle was proved with coverage `>= 1`; the lowest is `1.0000019…`.
-That is below the `1.0001` which tokoharu's `verify.cpp` asks for, so this certificate
-is not in his format and is not listed in the tables above. It was checked instead with
-a research copy of that verifier, which proves coverage `>= 1` over every centre domain.
-The argument rests on `B(1 + 83/40000) < 1`, which puts a net-angle core strictly inside
-every unit square.
-
-The directory has the rational candidate, the checker and the complete 621-file bundle.
-The full replay, the integer axis tables and all 200 oblique angles, was run where the
-certificate was made and again from the published tarball, and both passed. The oblique
-replay uses the same outward-rounded algorithm as the proof, not a second implementation.
+An earlier certificate, `s(50) >= 3659/500 = 7.318` (`mixed_n50_L7318`, the first past Green's bound here),
+was withdrawn on 2 October 2026 because the two above supersede it. It remains in the history of this
+repository at commit `b08fb24`.
 
 ## n = 65: a certificate past Green's bound
 

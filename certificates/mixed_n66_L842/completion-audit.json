@@ -10,7 +10,7 @@
   "all_angles": 201,
   "certificate_sha256": "304f36d50b58d462e8a754fe62da29496bc8bc9bb48cad8f221fb7aceb726053",
   "bundle": "n66-L8.42-proof-bundle",
-  "archive_sha256": "0f06a42bd26f8a0dcdcbf408099ed003c6c6c16f6ed9317138f58bf2f8193109",
+  "archive_sha256": "f7c7d908f00ec5f9e88224f96250ce57eb243d310929e95b3e16c0ab242e02bf",
   "route": "n66 fresh Green initialization at L8.42 with budget n66 (rectangles), full-net repair, 201-angle verification and replay.",
   "scope": "All centres at all 201 net angles plus strict core containment for every orientation; independent axis replay, same-algorithm outward-rounded oblique replay."
 }

@@ -34,7 +34,7 @@ packing are disjoint, so 37 squares would need total mass `>= 37`.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n37-L6.44-proof-bundle.tar.gz`: the complete bundle, 621 files including every angle's
   input and result (SHA-256
-  `1e3420bb16e6caf80048b66ca8a6a16ae766ec3e0db87a09fddd10db68c8c246`).
+  `61a29142ec81cfa0fadffba3e04bd6e512ee0439897fb6dfd7610ecc737542f8`).
 
 ## Reproduce
 

@@ -4,7 +4,7 @@ A density certificate proving that 50 unit squares do not fit in a square of sid
 `L = 147/20 = 7.35`. This exceeds Green's bound for `n = 50`,
 `2√2 + 101/25 + 3√14/25 = 7.3174260…`, by more than `0.0325739`
 (compared exactly with integer square-root bounds; see `final-audit.json`).
-It supersedes [`mixed_n50_L7318`](../mixed_n50_L7318/README.md).
+It supersedes an earlier certificate, `s(50) >= 7.318`, since withdrawn (commit `b08fb24`).
 
 The measure is 499 rectangles of uniform density with exact rational geometry and
 masses, and no point masses. The total mass is `4999999/100000 = 49.99999 < 50`.

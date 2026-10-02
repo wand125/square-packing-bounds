@@ -38,7 +38,7 @@ packing are disjoint, so 87 squares would need total mass `>= 87`.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n87-L9.39-proof-bundle.tar.gz`: the complete bundle, 621 files including every angle's
   input and result (SHA-256
-  `4ae46723c44fa3151b93b6430b0122fee88042c96942678e7d17ad2f5f868799`).
+  `9f1f1210aaa251ff5fe38ed97e108adf65d65f98cf4b9ca1246d800b925c7095`).
 
 ## Reproduce
 

@@ -10,7 +10,7 @@
   "all_angles": 201,
   "certificate_sha256": "ad166589b414c861f5b882d109b30ae3b50b66ca062d92df06cc84720ee53e62",
   "bundle": "n90-L9.60-proof-bundle",
-  "archive_sha256": "98a828a0dc3673ee793de8ea37d8f55b335690c9b9bfbd17b36a58f46da493e2",
+  "archive_sha256": "a3c4e731231b896c357c77c12d39284183d3b63c7824de44a82527a6dd9e2f37",
   "route": "n-1 rectangle certificate read with the n budget, expanded to L9.60 by n90-wall-9.60 (resize_initial), rectangles full-net repair, 201-angle verification and replay.",
   "scope": "All centres at all 201 net angles plus strict core containment for every orientation; independent axis replay, same-algorithm outward-rounded oblique replay."
 }

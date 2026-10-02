@@ -29,7 +29,7 @@ packing are disjoint, so 66 squares would need total mass `>= 66`.
   states, the source hashes and the exact comparison.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n66-L8.42-proof-bundle.tar.gz`: the complete bundle, 622 files including every angle's
-  input and result (SHA-256 `0f06a42bd26f8a0dcdcbf408099ed003c6c6c16f6ed9317138f58bf2f8193109`).
+  input and result (SHA-256 `f7c7d908f00ec5f9e88224f96250ce57eb243d310929e95b3e16c0ab242e02bf`).
 
 ## Reproduce
 

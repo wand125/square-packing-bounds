@@ -10,7 +10,7 @@
   "all_angles": 201,
   "certificate_sha256": "576d4117783bfdbdc8274517f1638a83c6fa08bbcffc584ce499d5adfa5513aa",
   "bundle": "n87-L9.40-proof-bundle",
-  "archive_sha256": "83d5e821e250cacd31c61775c204f1f22f9b95aabae3bc424b142faea01bcdb6",
+  "archive_sha256": "c33a44d66f4656f23f0f20eef82eacddc053a991b2c581a75df417fb1f5f4435",
   "route": "rect_n86_L9365 certificate read with the n87 budget, expanded to L9.40 by n87-centralw05-9.40 (resize_initial), rectangles full-net repair, 201-angle verification and replay.",
   "scope": "All centres at all 201 net angles plus strict core containment for every orientation; independent axis replay, same-algorithm outward-rounded oblique replay."
 }

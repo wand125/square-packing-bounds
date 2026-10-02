@@ -4,8 +4,7 @@ A density certificate proving that 50 unit squares do not fit in a square of sid
 `L = 37/5 = 7.4`. This exceeds Green's bound for `n = 50`,
 `2√2 + 101/25 + 3√14/25 = 7.3174260…`, by more than `0.082573`. The comparison is exact,
 with 90-digit integer square-root bounds (see `completion-audit.json`). This certificate
-supersedes [`mixed_n50_L735`](../mixed_n50_L735/README.md) and
-[`mixed_n50_L7318`](../mixed_n50_L7318/README.md).
+supersedes [`mixed_n50_L735`](../mixed_n50_L735/README.md).
 
 The measure is 553 rectangles with uniform density and no point masses. The total mass is
 `4999999/100000 = 49.99999 < 50`. The setting is that of the rectangle certificates in this
@@ -15,7 +14,7 @@ The coverage lower bound at each net angle is `>= 1`, with the lowest at `1.0000
 That is below the `1.0001` that tokoharu's `verify.cpp` requires, so the certificate is not
 in his format. It was checked with the verifier shipped here, `code/mixed_rotated_verify.cpp`.
 That is a research copy of `verify.cpp` which proves coverage `>= 1` over every centre domain
-with outward-rounded interval arithmetic. It is the same checker as for `mixed_n50_L7318`.
+with outward-rounded interval arithmetic. It is the same checker as for `mixed_n65_L835`.
 
 The candidate was built directly at L = 7.4, from a structured initialization, then priced
 over free support and repaired against counterexamples on the full net. It was not obtained
@@ -38,7 +37,7 @@ packing are disjoint, so 50 squares would need total mass `>= 50`.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n50-L7.40-proof-bundle.tar.gz`: the complete bundle, 621 files including every angle's
   input and result (SHA-256
-  `90621d1a7ceb27267ef7b4bf3ffb5906f50e259ac28c955ec6679e64c604638f`).
+  `2c405bbd4e9c6a7000f0095ca6ca494023d75e169b03243526e4fef5a8c8e133`).
 
 ## Reproduce
 

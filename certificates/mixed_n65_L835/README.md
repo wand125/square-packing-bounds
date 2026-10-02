@@ -36,7 +36,7 @@ packing are disjoint, so 65 squares would need total mass `>= 65`.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n65-L8.35-proof-bundle.tar.gz`: the complete bundle, 621 files including every angle's
   input and result (SHA-256
-  `016f32f6a8be9bd03e6920d4cf3606676f63fac2caa90b029463655faa01eab8`).
+  `fe2cf2de8686ad86d0c00326d25957828563f9c4043d60d79a2fb20215e1ddf0`).
 
 ## Reproduce
 

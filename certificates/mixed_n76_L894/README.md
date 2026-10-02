@@ -31,7 +31,7 @@ packing are disjoint, so 76 squares would need total mass `>= 76`.
   states, the source hashes and the exact comparison.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n76-L8.94-proof-bundle.tar.gz`: the complete bundle, 622 files including every angle's
-  input and result (SHA-256 `d804bb88f0fa5fd5cfa11aeccb4977f708a015879917c189c6d6511f1bbbef63`).
+  input and result (SHA-256 `96fbd66004dbffa5ff5870587f83202a4e590066d1715c2ff0302abff2605b4d`).
 
 ## Reproduce
 

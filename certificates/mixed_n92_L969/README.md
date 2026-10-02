@@ -29,7 +29,7 @@ packing are disjoint, so 92 squares would need total mass `>= 92`.
   states, the source hashes and the exact comparison.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n92-L9.69-proof-bundle.tar.gz`: the complete bundle, 622 files including every angle's
-  input and result (SHA-256 `52555aa331d6fe8d8f65911d0581cb4b46a2674e1a188ee35b9daecc258b4445`).
+  input and result (SHA-256 `2037c8fabc6dafd300b14df7c3493ee65af4d5925eb5744d682f80daf8be9696`).
 
 ## Reproduce
 

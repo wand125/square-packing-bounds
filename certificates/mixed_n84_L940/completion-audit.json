@@ -10,7 +10,7 @@
   "all_angles": 201,
   "certificate_sha256": "a663ffe2b346626b6c34e13d07ad2b94ee83ad6174c8821cd02b15f221bb0917",
   "bundle": "n84-L9.40-proof-bundle",
-  "archive_sha256": "723f167b569835d8aa6f2dfb9eb61d99f5199a2a94f78a4edf9039b7eaf7f080",
+  "archive_sha256": "90506d0d36da0c86619943984c796d870fc16104e33dbe254cfb2dcf4bbcf370",
   "route": "n84 fresh Green initialization at L9.4 (rectangles), full-net repair, 201-angle verification and replay.",
   "scope": "All centres at all 201 net angles plus strict core containment for every orientation; independent axis replay, same-algorithm outward-rounded oblique replay."
 }
