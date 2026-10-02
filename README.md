@@ -582,6 +582,20 @@ measure and repaired on the full net. Every net angle has coverage `>= 1`; the l
 `1.0000000008…` and `1.0000000017…`. They use the same verifier as the n = 50, 65 and 66 certificates.
 The full 201-angle replay was run again from each published tarball before publication.
 
+## n = 85: a certificate past the n = 85 certificate above
+
+[`certificates/mixed_n85_L946`](certificates/mixed_n85_L946/README.md) proves
+
+```
+s(85) >= 473/50 = 9.46
+```
+
+This supersedes `mixed_n85_L942` (9.42) and, by monotonicity, also gives `s(86) >= 9.46` and `s(87) >= 9.46`. It is
+above Green's reported bound `9.2667…` for n = 82–85 by `0.193`. The measure was built from scratch from a structured
+initial measure and repaired on the full net, with the same verifier as the n = 84 and 85 certificates above. Before
+publication the full 201-angle replay was run again from the bundle on a fresh Ubuntu 24.04 machine with only the
+README's requirements installed.
+
 ## n = 101: a linear certificate past Green's bound
 
 [`certificates/mixed_n101_L1028`](certificates/mixed_n101_L1028/README.md) proves
