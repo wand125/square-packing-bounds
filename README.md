@@ -571,6 +571,20 @@ certificates) and repaired on the full net. Every net angle has coverage `>= 1`,
 `1.0000000009…`. It uses the same verifier as the n = 50 and n = 65 certificates. The full 201-angle
 replay was run again from the published tarball before publication.
 
+## n = 76: a structured certificate past the rectangle ladder
+
+[`certificates/mixed_n76_L894`](certificates/mixed_n76_L894/README.md) proves
+
+```
+s(76) >= 447/50 = 8.94
+```
+
+This is above the rectangle certificate `rect_n76_L8925` (8.925) by `0.015`. The measure is 317
+uniform-density rectangles with total mass `7599999/100000`, built from scratch from a structured initial
+measure and repaired on the full net. Every net angle has coverage `>= 1`, and the lowest is
+`1.0000000005…`. It uses the same verifier as the n = 66, 84 and 85 certificates. The full 201-angle
+replay was run again from the published tarball before publication.
+
 ## n = 84, 85: certificates past Green's bound
 
 [`certificates/mixed_n84_L940`](certificates/mixed_n84_L940/README.md) and
