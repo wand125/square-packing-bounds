@@ -758,6 +758,19 @@ rectangles, built from scratch from a structured initial measure and repaired on
 as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the
 README's requirements installed.
 
+## n = 87: 9.55, superseding 9.48
+
+[`certificates/mixed_n87_L955`](certificates/mixed_n87_L955/README.md) proves
+
+```
+s(87) >= 191/20 = 9.55
+```
+
+This supersedes `mixed_n87_L948` above and exceeds the bound 9.5 that `mixed_n86_L950` gives for n = 87 by
+monotonicity. The measure is 509 rectangles, built from scratch from a structured initial measure and repaired on the
+full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh
+Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
