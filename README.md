@@ -877,6 +877,16 @@ s(55) >= 966/125 = 7.728
 
 This exceeds our rectangle certificate `rect_n55_L77125` (7.7125) and Nagamochi's closed form `1 + √42 = 7.4807…` (a reference value). The measure is 303 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 90: 9.725, a Green-series certificate
+
+[`certificates/mixed_n90_L9725`](certificates/mixed_n90_L9725/README.md) proves
+
+```
+s(90) >= 389/40 = 9.725
+```
+
+This supersedes `mixed_n90_L960` above. This exceeds our earlier certificate `mixed_n90_L960`, the bound 9.65 that `mixed_n89_L965` gives for n = 90 by monotonicity, and Nagamochi's closed form `1 + √73 = 9.5440…` (a reference value). The measure is 571 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
