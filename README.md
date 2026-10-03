@@ -718,6 +718,19 @@ measure and repaired on the full net. Every net angle has coverage `>= 1`; the l
 uses the same verifier as the n = 84 and 85 certificates. Before publication the full 201-angle replay was run
 again from the published tarball on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 95: a Green-series certificate past Nagamochi's closed form
+
+[`certificates/mixed_n95_L996`](certificates/mixed_n95_L996/README.md) proves
+
+```
+s(95) >= 249/25 = 9.96
+```
+
+This exceeds our rectangle certificate `rect_n95_L98518` (9.8518) and Nagamochi's closed form `1 + √78 = 9.8317…`
+(a reference value). The measure is 438 rectangles, built from scratch from a structured initial measure and repaired
+on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a
+fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
