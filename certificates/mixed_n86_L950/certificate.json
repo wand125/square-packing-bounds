@@ -1,0 +1,1634 @@
+{
+  "status": "ALL_ANGLES_VERIFIED_AND_REPLAYED",
+  "n": 86,
+  "L": "9.5",
+  "B": "0.9977",
+  "total_mass": "8599999/100000",
+  "budget_gap": "1/100000",
+  "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+  "angle_count": 201,
+  "net": {
+    "step": "83/40000",
+    "count": 201,
+    "endpoint": "83/200",
+    "endpoint_check": "89/40000",
+    "rotated_side_upper": "399908091/400000000",
+    "side_margin": "91909/400000000",
+    "per_edge_margin": "91909/800000000",
+    "conclusion": "Every unit-square orientation contains a concentric B-core at a net angle strictly in its interior.",
+    "remaining": "Every admissible centre at every net angle must have mixed score >= Gamma, and M < n*Gamma. Not checked here."
+  },
+  "theorem": "No packing of n closed unit squares in the closed square of side L: choose disjoint interior closed cores at net angles; each has measure >=1 but total measure <n.",
+  "replay_scope": "Independent axis integer-table checker; oblique verification uses regenerated input and the same outward-rounded algorithm. Not a separate independent oblique implementation.",
+  "point_mass": "0",
+  "results": {
+    "0": {
+      "status": "AXIS_CERTIFICATE_REPLAYED",
+      "digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "cells": 10562500,
+      "gamma": "1",
+      "integer_minimum": 1.0061406086120193,
+      "scope": "Net angle zero only, no full packing certification."
+    },
+    "1": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 1,
+      "lower": 1.0000002459303141,
+      "nodes": 273883,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "2": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 2,
+      "lower": 1.000000303961729,
+      "nodes": 273953,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "3": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 3,
+      "lower": 1.0000001569748351,
+      "nodes": 275601,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "4": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 4,
+      "lower": 1.00000121704479,
+      "nodes": 277433,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "5": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 5,
+      "lower": 1.0000002848045093,
+      "nodes": 279057,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "6": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 6,
+      "lower": 1.000000452300458,
+      "nodes": 280059,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "7": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 7,
+      "lower": 1.0000002129490684,
+      "nodes": 282271,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "8": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 8,
+      "lower": 1.000000411674006,
+      "nodes": 284023,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "9": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 9,
+      "lower": 1.000000250029609,
+      "nodes": 286193,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "10": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 10,
+      "lower": 1.000000594653653,
+      "nodes": 288509,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "11": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 11,
+      "lower": 1.0000003659058372,
+      "nodes": 291295,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "12": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 12,
+      "lower": 1.00000009521393,
+      "nodes": 293937,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "13": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 13,
+      "lower": 1.000000566488793,
+      "nodes": 295521,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "14": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 14,
+      "lower": 1.0000003795796693,
+      "nodes": 297791,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "15": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 15,
+      "lower": 1.000000059611992,
+      "nodes": 300349,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "16": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 16,
+      "lower": 1.0000000212322318,
+      "nodes": 302573,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "17": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 17,
+      "lower": 1.000000203730072,
+      "nodes": 305263,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "18": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 18,
+      "lower": 1.0000000420977835,
+      "nodes": 307439,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "19": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 19,
+      "lower": 1.0000001515723207,
+      "nodes": 309223,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "20": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 20,
+      "lower": 1.0000003453780222,
+      "nodes": 310661,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "21": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 21,
+      "lower": 1.0000001386019395,
+      "nodes": 311927,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "22": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 22,
+      "lower": 1.0000003730678129,
+      "nodes": 313147,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "23": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 23,
+      "lower": 1.00000020043939,
+      "nodes": 315287,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "24": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 24,
+      "lower": 1.0000000030545175,
+      "nodes": 316985,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "25": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 25,
+      "lower": 1.0000002760602922,
+      "nodes": 318445,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "26": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 26,
+      "lower": 1.0000005240407528,
+      "nodes": 319965,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "27": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 27,
+      "lower": 1.0000009955623277,
+      "nodes": 322199,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "28": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 28,
+      "lower": 1.0000010269285553,
+      "nodes": 324043,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "29": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 29,
+      "lower": 1.000000385291324,
+      "nodes": 325755,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "30": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 30,
+      "lower": 1.0000000598029728,
+      "nodes": 327757,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "31": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 31,
+      "lower": 1.0000002788618119,
+      "nodes": 329909,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "32": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 32,
+      "lower": 1.0000006110562303,
+      "nodes": 331879,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "33": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 33,
+      "lower": 1.0000002775136707,
+      "nodes": 333295,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "34": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 34,
+      "lower": 1.0000003859927964,
+      "nodes": 334997,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "35": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 35,
+      "lower": 1.0000000899506087,
+      "nodes": 336417,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "36": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 36,
+      "lower": 1.0000002188213672,
+      "nodes": 338009,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "37": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 37,
+      "lower": 1.0000004740923636,
+      "nodes": 340255,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "38": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 38,
+      "lower": 1.0000000875844859,
+      "nodes": 341609,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "39": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 39,
+      "lower": 1.0000005159213239,
+      "nodes": 342915,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "40": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 40,
+      "lower": 1.0000014044969887,
+      "nodes": 344483,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "41": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 41,
+      "lower": 1.0000000018955182,
+      "nodes": 346069,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "42": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 42,
+      "lower": 1.0000007648823266,
+      "nodes": 347765,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "43": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 43,
+      "lower": 1.0000001281954694,
+      "nodes": 349333,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "44": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 44,
+      "lower": 1.0000006640505852,
+      "nodes": 350795,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "45": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 45,
+      "lower": 1.000000064716489,
+      "nodes": 352717,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "46": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 46,
+      "lower": 1.0000000937900544,
+      "nodes": 354667,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "47": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 47,
+      "lower": 1.0000002009353104,
+      "nodes": 356631,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "48": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 48,
+      "lower": 1.000000084023295,
+      "nodes": 358257,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "49": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 49,
+      "lower": 1.0000007270184093,
+      "nodes": 359407,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "50": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 50,
+      "lower": 1.0000004831086446,
+      "nodes": 360663,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "51": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 51,
+      "lower": 1.0000001731706654,
+      "nodes": 362447,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "52": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 52,
+      "lower": 1.0000001618597743,
+      "nodes": 363679,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "53": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 53,
+      "lower": 1.0000000364188901,
+      "nodes": 365221,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "54": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 54,
+      "lower": 1.0000002327445965,
+      "nodes": 366505,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "55": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 55,
+      "lower": 1.000000042545791,
+      "nodes": 367513,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "56": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 56,
+      "lower": 1.0000001480555933,
+      "nodes": 369563,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "57": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 57,
+      "lower": 1.0000001496867612,
+      "nodes": 371633,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "58": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 58,
+      "lower": 1.0000004715654935,
+      "nodes": 373211,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "59": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 59,
+      "lower": 1.0000006116588762,
+      "nodes": 374877,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "60": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 60,
+      "lower": 1.000001545637528,
+      "nodes": 376861,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "61": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 61,
+      "lower": 1.0000000448829587,
+      "nodes": 378685,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "62": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 62,
+      "lower": 1.0000008497238129,
+      "nodes": 380221,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "63": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 63,
+      "lower": 1.0000012096179782,
+      "nodes": 381817,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "64": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 64,
+      "lower": 1.0000000525362638,
+      "nodes": 383235,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "65": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 65,
+      "lower": 1.0000002125151148,
+      "nodes": 384775,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "66": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 66,
+      "lower": 1.0000001758538741,
+      "nodes": 386319,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "67": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 67,
+      "lower": 1.0000002791720837,
+      "nodes": 388113,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "68": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 68,
+      "lower": 1.0000008497193968,
+      "nodes": 389545,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "69": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 69,
+      "lower": 1.0000001005412298,
+      "nodes": 391587,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "70": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 70,
+      "lower": 1.0000006888275512,
+      "nodes": 393599,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "71": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 71,
+      "lower": 1.0000000702005716,
+      "nodes": 395479,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "72": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 72,
+      "lower": 1.0000002529811947,
+      "nodes": 397545,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "73": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 73,
+      "lower": 1.0000001056602725,
+      "nodes": 399353,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "74": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 74,
+      "lower": 1.000000028627777,
+      "nodes": 401339,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "75": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 75,
+      "lower": 1.0000002355335638,
+      "nodes": 403273,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "76": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 76,
+      "lower": 1.0000001901149447,
+      "nodes": 405173,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "77": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 77,
+      "lower": 1.0000003313031973,
+      "nodes": 407071,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "78": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 78,
+      "lower": 1.0000005417001434,
+      "nodes": 408875,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "79": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 79,
+      "lower": 1.0000000189362384,
+      "nodes": 410959,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "80": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 80,
+      "lower": 1.0000001763073159,
+      "nodes": 413179,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "81": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 81,
+      "lower": 1.000000205703595,
+      "nodes": 415439,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "82": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 82,
+      "lower": 1.0000001010549393,
+      "nodes": 417977,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "83": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 83,
+      "lower": 1.0000001925904909,
+      "nodes": 420207,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "84": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 84,
+      "lower": 1.0000000640666298,
+      "nodes": 422249,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "85": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 85,
+      "lower": 1.0000001020094837,
+      "nodes": 423965,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "86": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 86,
+      "lower": 1.000000140670261,
+      "nodes": 426069,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "87": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 87,
+      "lower": 1.0000000341836845,
+      "nodes": 428189,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "88": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 88,
+      "lower": 1.0000001185028518,
+      "nodes": 430159,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "89": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 89,
+      "lower": 1.0000004395800912,
+      "nodes": 432323,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "90": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 90,
+      "lower": 1.0000001322113097,
+      "nodes": 434471,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "91": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 91,
+      "lower": 1.0000000576631136,
+      "nodes": 436767,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "92": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 92,
+      "lower": 1.0000003107154902,
+      "nodes": 438969,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "93": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 93,
+      "lower": 1.0000003650947291,
+      "nodes": 441113,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "94": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 94,
+      "lower": 1.0000000180160227,
+      "nodes": 443103,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "95": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 95,
+      "lower": 1.0000000259418087,
+      "nodes": 445299,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "96": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 96,
+      "lower": 1.0000001996794328,
+      "nodes": 447543,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "97": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 97,
+      "lower": 1.0000000683672605,
+      "nodes": 449787,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "98": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 98,
+      "lower": 1.000000445955023,
+      "nodes": 451965,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "99": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 99,
+      "lower": 1.0000002398640864,
+      "nodes": 454277,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "100": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 100,
+      "lower": 1.0000001065021777,
+      "nodes": 456689,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "101": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 101,
+      "lower": 1.0000000096478359,
+      "nodes": 458905,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "102": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 102,
+      "lower": 1.0000000745689812,
+      "nodes": 461225,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "103": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 103,
+      "lower": 1.000000122463415,
+      "nodes": 463393,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "104": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 104,
+      "lower": 1.0000000190952476,
+      "nodes": 465433,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "105": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 105,
+      "lower": 1.0000001270688723,
+      "nodes": 467629,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "106": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 106,
+      "lower": 1.0000004571183116,
+      "nodes": 469473,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "107": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 107,
+      "lower": 1.0000000693694358,
+      "nodes": 471291,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "108": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 108,
+      "lower": 1.0000002906177896,
+      "nodes": 473137,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "109": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 109,
+      "lower": 1.000001120541356,
+      "nodes": 475413,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "110": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 110,
+      "lower": 1.0000001164469445,
+      "nodes": 477797,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "111": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 111,
+      "lower": 1.0000000155335371,
+      "nodes": 480207,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "112": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 112,
+      "lower": 1.000000051099928,
+      "nodes": 482407,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "113": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 113,
+      "lower": 1.0000000110896825,
+      "nodes": 484401,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "114": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 114,
+      "lower": 1.0000000373215574,
+      "nodes": 486569,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "115": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 115,
+      "lower": 1.0000001976185202,
+      "nodes": 488531,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "116": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 116,
+      "lower": 1.0000001792824331,
+      "nodes": 490717,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "117": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 117,
+      "lower": 1.0000000536528681,
+      "nodes": 492613,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "118": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 118,
+      "lower": 1.000000005736641,
+      "nodes": 494613,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "119": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 119,
+      "lower": 1.0000000726178446,
+      "nodes": 497009,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "120": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 120,
+      "lower": 1.0000001415738888,
+      "nodes": 498915,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "121": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 121,
+      "lower": 1.0000001470033635,
+      "nodes": 500973,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "122": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 122,
+      "lower": 1.0000003457308797,
+      "nodes": 503163,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "123": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 123,
+      "lower": 1.0000004980268888,
+      "nodes": 505441,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "124": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 124,
+      "lower": 1.0000000699884974,
+      "nodes": 507535,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "125": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 125,
+      "lower": 1.0000000893639518,
+      "nodes": 509745,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "126": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 126,
+      "lower": 1.0000000062109704,
+      "nodes": 512009,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "127": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 127,
+      "lower": 1.0000002404491806,
+      "nodes": 514239,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "128": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 128,
+      "lower": 1.000000124026612,
+      "nodes": 516309,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "129": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 129,
+      "lower": 1.0000001296595196,
+      "nodes": 518637,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "130": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 130,
+      "lower": 1.000000072035104,
+      "nodes": 520941,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "131": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 131,
+      "lower": 1.0000003366811692,
+      "nodes": 523707,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "132": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 132,
+      "lower": 1.0000002066353326,
+      "nodes": 526219,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "133": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 133,
+      "lower": 1.0000005305061699,
+      "nodes": 528489,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "134": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 134,
+      "lower": 1.0000003238768735,
+      "nodes": 531167,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "135": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 135,
+      "lower": 1.0000000486002358,
+      "nodes": 533671,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "136": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 136,
+      "lower": 1.0000002024149761,
+      "nodes": 536123,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "137": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 137,
+      "lower": 1.0000002524383012,
+      "nodes": 538569,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "138": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 138,
+      "lower": 1.000000094545992,
+      "nodes": 541109,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "139": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 139,
+      "lower": 1.0000003797878396,
+      "nodes": 543879,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "140": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 140,
+      "lower": 1.00000006035385,
+      "nodes": 546971,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "141": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 141,
+      "lower": 1.0000003999052325,
+      "nodes": 550231,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "142": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 142,
+      "lower": 1.0000004652920453,
+      "nodes": 553421,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "143": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 143,
+      "lower": 1.000000067791569,
+      "nodes": 556385,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "144": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 144,
+      "lower": 1.0000001662355227,
+      "nodes": 559611,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "145": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 145,
+      "lower": 1.0000000907733373,
+      "nodes": 562431,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "146": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 146,
+      "lower": 1.0000000999063032,
+      "nodes": 565575,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "147": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 147,
+      "lower": 1.0000000864193828,
+      "nodes": 568877,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "148": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 148,
+      "lower": 1.000000195826351,
+      "nodes": 572099,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "149": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 149,
+      "lower": 1.0000000342063677,
+      "nodes": 575289,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "150": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 150,
+      "lower": 1.0000002858901982,
+      "nodes": 578443,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "151": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 151,
+      "lower": 1.0000000639003632,
+      "nodes": 581693,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "152": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 152,
+      "lower": 1.000000025120212,
+      "nodes": 584849,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "153": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 153,
+      "lower": 1.0000000367868234,
+      "nodes": 588069,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "154": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 154,
+      "lower": 1.0000002387885336,
+      "nodes": 591441,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "155": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 155,
+      "lower": 1.0000001051257181,
+      "nodes": 594891,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "156": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 156,
+      "lower": 1.0000000407596097,
+      "nodes": 597939,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "157": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 157,
+      "lower": 1.0000004535087734,
+      "nodes": 601089,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "158": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 158,
+      "lower": 1.0000002268445638,
+      "nodes": 604581,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "159": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 159,
+      "lower": 1.0000004252753965,
+      "nodes": 608343,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "160": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 160,
+      "lower": 1.0000004853856053,
+      "nodes": 611679,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "161": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 161,
+      "lower": 1.0000001109093561,
+      "nodes": 615031,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "162": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 162,
+      "lower": 1.0000001609212308,
+      "nodes": 618373,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "163": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 163,
+      "lower": 1.0000001117416106,
+      "nodes": 621709,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "164": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 164,
+      "lower": 1.0000002954856704,
+      "nodes": 625203,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "165": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 165,
+      "lower": 1.0000000417366917,
+      "nodes": 628583,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "166": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 166,
+      "lower": 1.0000000599145946,
+      "nodes": 632255,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "167": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 167,
+      "lower": 1.0000000712322736,
+      "nodes": 635793,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "168": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 168,
+      "lower": 1.0000000741735913,
+      "nodes": 639329,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "169": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 169,
+      "lower": 1.0000001224580128,
+      "nodes": 642809,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "170": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 170,
+      "lower": 1.0000000002330935,
+      "nodes": 646085,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "171": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 171,
+      "lower": 1.0000000001438667,
+      "nodes": 649271,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "172": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 172,
+      "lower": 1.0000000401239177,
+      "nodes": 652677,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "173": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 173,
+      "lower": 1.0000000581367614,
+      "nodes": 655749,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "174": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 174,
+      "lower": 1.000000204325248,
+      "nodes": 658987,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "175": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 175,
+      "lower": 1.0000000831975926,
+      "nodes": 662217,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "176": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 176,
+      "lower": 1.000000039149846,
+      "nodes": 665475,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "177": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 177,
+      "lower": 1.000000062017772,
+      "nodes": 668829,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "178": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 178,
+      "lower": 1.0000000797952069,
+      "nodes": 671619,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "179": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 179,
+      "lower": 1.0000000308720376,
+      "nodes": 674417,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "180": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 180,
+      "lower": 1.0000000398938655,
+      "nodes": 677129,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "181": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 181,
+      "lower": 1.000000163527844,
+      "nodes": 679917,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "182": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 182,
+      "lower": 1.000000092106197,
+      "nodes": 682497,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "183": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 183,
+      "lower": 1.000000010772589,
+      "nodes": 684931,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "184": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 184,
+      "lower": 1.0000002431625135,
+      "nodes": 687401,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "185": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 185,
+      "lower": 1.000000002777297,
+      "nodes": 689703,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "186": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 186,
+      "lower": 1.0000000209645978,
+      "nodes": 691819,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "187": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 187,
+      "lower": 1.0000001535517045,
+      "nodes": 693599,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "188": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 188,
+      "lower": 1.00000013362899,
+      "nodes": 695923,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "189": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 189,
+      "lower": 1.000000057854835,
+      "nodes": 697685,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "190": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 190,
+      "lower": 1.0000000653129997,
+      "nodes": 699579,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "191": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 191,
+      "lower": 1.0000002115817517,
+      "nodes": 700971,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "192": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 192,
+      "lower": 1.0000001791405955,
+      "nodes": 702469,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "193": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 193,
+      "lower": 1.00000007194613,
+      "nodes": 704055,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "194": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 194,
+      "lower": 1.0000000721250404,
+      "nodes": 705255,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "195": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 195,
+      "lower": 1.0000000378532292,
+      "nodes": 706485,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "196": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 196,
+      "lower": 1.0000000079622964,
+      "nodes": 707241,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "197": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 197,
+      "lower": 1.0000001134814713,
+      "nodes": 708221,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "198": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 198,
+      "lower": 1.0000000920053602,
+      "nodes": 708489,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "199": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 199,
+      "lower": 1.00000014378641,
+      "nodes": 708693,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    },
+    "200": {
+      "status": "ANGLE_RESULT_REPLAYED",
+      "candidate_digest": "a042af995541097298a2c6b44970d072a1b7eb7bcbcc41d0e4d8965c3dcb82fa",
+      "index": 200,
+      "lower": 1.000000294701259,
+      "nodes": 708789,
+      "scope": "Same outward-rounded algorithm re-executed; not an independent proof implementation."
+    }
+  }
+}

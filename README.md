@@ -744,6 +744,20 @@ This exceeds our rectangle certificate `rect_n94_L9805` (9.805) and Nagamochi's 
 on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a
 fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 86: a Green-series certificate
+
+[`certificates/mixed_n86_L950`](certificates/mixed_n86_L950/README.md) proves
+
+```
+s(86) >= 19/2 = 9.5
+```
+
+This exceeds the bound 9.46 that `mixed_n85_L946` gives for n = 86 by monotonicity, our rectangle certificate
+`rect_n86_L9365` (9.365), and Nagamochi's closed form `1 + √69 = 9.3066…` (a reference value). The measure is 509
+rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier
+as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the
+README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
