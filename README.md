@@ -771,6 +771,20 @@ monotonicity. The measure is 509 rectangles, built from scratch from a structure
 full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh
 Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 93: a Green-series certificate
+
+[`certificates/mixed_n93_L986`](certificates/mixed_n93_L986/README.md) proves
+
+```
+s(93) >= 493/50 = 9.86
+```
+
+This exceeds the bound 9.75 that `mixed_n92_L975` gives for n = 93 by monotonicity, our rectangle certificate
+`rect_n93_L9735` (9.735), and Nagamochi's closed form `1 + √76 = 9.7178…` (a reference value). The measure is 443
+rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier
+as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the
+README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
