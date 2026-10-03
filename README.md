@@ -785,6 +785,19 @@ rectangles, built from scratch from a structured initial measure and repaired on
 as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the
 README's requirements installed.
 
+## n = 89: a Green-series certificate past Nagamochi's closed form
+
+[`certificates/mixed_n89_L965`](certificates/mixed_n89_L965/README.md) proves
+
+```
+s(89) >= 193/20 = 9.65
+```
+
+This exceeds our rectangle certificate `rect_n89_L9565` (9.565) and Nagamochi's closed form `1 + √72 = 9.4853…`
+(a reference value). The measure is 416 rectangles, built from scratch from a structured initial measure and repaired
+on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a
+fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
