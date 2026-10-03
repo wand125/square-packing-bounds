@@ -798,6 +798,19 @@ This exceeds our rectangle certificate `rect_n89_L9565` (9.565) and Nagamochi's 
 on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a
 fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 52: a Green-series certificate
+
+[`certificates/mixed_n52_L755`](certificates/mixed_n52_L755/README.md) proves
+
+```
+s(52) >= 151/20 = 7.55
+```
+
+This exceeds our rectangle certificate `rect_n52_L7535` (7.535) and Green's reported bound for k = 7, `7.3174…`
+(a reference value). The measure is 455 rectangles, built from scratch from a structured initial measure and repaired
+on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a
+fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
