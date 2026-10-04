@@ -69,8 +69,8 @@ All sweeps were run on the file in this directory (same SHA256). Logs are includ
 
 | check | command | result | roots | uncertified | time |
 |---|---|---|---|---|---|
-| zmx2, D4-reduced | `zmx2 cert COVER --d4` | `VERIFIED-D4` | 6,400 | 0 | 123 s wall / 243 s CPU, 9,844,124 boxes |
-| zmx2, unreduced | `zmx2 cert COVER --full` | `VERIFIED` | 51,200 | 0 | 981 s wall / 1,944 s CPU, 79,108,328 boxes |
+| zmx2, D4-reduced | `zmx2 cert COVER --d4` | `VERIFIED-D4` | 6,400 | 0 | 75 s wall / 148 s CPU (2 threads), 9,844,124 boxes |
+| zmx2, unreduced | `zmx2 cert COVER --full` | `VERIFIED` | 51,200 | 0 | 899 s wall / 1,780 s CPU (2 threads), 79,108,328 boxes |
 | zm_mixed, exact rationals, depth 24 | `zm_mixed.py cert COVER --d4 --cert-mode --disj --chain-from 0 --depth 24 --pitch 1/20 --ubins 16` | 6 boxes uncertified, all in one root `R` | 102,400 | 6 | 76,108 s wall / 455,030 s CPU (6 processes), 1,514,784 boxes |
 | zm_mixed, the root `R` alone, depth 34 | same, plus `--depth 34 --cx-lo 27/20 --cx-hi 7/5 --cy-lo 13/10 --cy-hi 27/20 --u-lo 1/4 --u-hi 9/32` | `VERIFIED-D4 (PARTIAL)` | 1 | 0 | 3,259 s, 13,767 boxes, max depth 26 |
 
@@ -84,17 +84,29 @@ Here `R = [27/20, 7/5] x [13/10, 27/20] x {u in [1/4, 9/32]}` (`theta = 2 arctan
   lists 6 uncertified boxes, all inside `R`. A second run of the same checker, restricted to `R` and
   with depth limit 34, certifies `R` with no uncertified box (it needed depth 26). Together the two runs
   cover the whole D4 region. The depth-24 run's own verdict line therefore reads `NOT VERIFIED`; that
-  is expected, and `verify.sh --zm` checks that its 6 boxes lie in `R`.
+  is expected. `check_records.py` verifies this from the records in exact rational arithmetic (below).
 
 The logs were written on cloud machines; the paths in them are those machines' working directories.
 
-Logs:
-- `zmx2_d4/run.log`
-- `zmx2_full/run.log`
-- `zm_mixed_d4/run.log`, `zm_mixed_d4/manifest.json` (all roots, depth 24)
-- `zm_mixed_root/run.log`, `zm_mixed_root/manifest.json` (root `R`, depth 34)
+Run records (the `.log` outputs are shipped as `*_log.txt` so that they are not caught by the repository's
+`*.log` ignore rule):
+- `zmx2_d4/run_log.txt`, `zmx2_d4/roots_log.txt.gz` (standard output and per-root log of the `--d4` sweep)
+- `zmx2_full/run_log.txt`, `zmx2_full/roots_log.txt.gz` (the same for the `--full` sweep)
+- `zmx2_toolchain.txt`: SHA256 of `zmx2.rs` and of the `zmx2` binary used, `rustc`/`cargo` versions, CPU, the cover's
+  SHA256 and both commands. The binary was built with `cargo build --release --bin zmx2` from the pinned upstream
+  `s12/verify2`.
+- `zm_mixed_d4/run_log.txt`, `zm_mixed_d4/manifest.json`, `zm_mixed_d4/roots.jsonl.gz` (all roots, depth 24)
+- `zm_mixed_root/run_log.txt`, `zm_mixed_root/manifest.json`, `zm_mixed_root/roots.jsonl` (root `R`, depth 34)
 
-Each manifest records the SHA256 of the input and of the three checker files.
+Each `zm_mixed` manifest and `roots.jsonl` header records the SHA256 of the input and of the three checker files.
+`roots.jsonl` has one record per root box with its census and the exact rational bounds of every uncertified box
+(a resumed run may record a root twice; every record is checked).
+
+`check_records.py` (Python standard library only) checks the two `zm_mixed` record files exactly: the headers
+name the pinned checker files, this cover's SHA256, cert mode, D4, pitch `1/20`, 16 u-bins and depths 24 and 34;
+the depth-24 run has a record for each of the `80 x 80 x 16 = 102,400` root boxes of the D4 region and no other;
+every record has `UNCERT 0` except those of `R`; the uncertified boxes of `R` lie inside `R` (exact `Fraction`
+comparisons); and the depth-34 run covers exactly `R` with `UNCERT 0`.
 
 ### Checkers used (not bundled)
 
@@ -128,11 +140,14 @@ sh verify.sh /path/to/new/workdir 8 --zm        # also both zm_mixed runs (about
 
 `verify.sh` does the following, in order:
 1. checks `SHA256SUMS`;
-2. clones the upstream repository and checks out the pinned commit;
-3. checks the checker hashes;
-4. computes the exact total with the upstream reader and asserts that it is `< 59`;
-5. builds `zmx2` and checks D4 invariance;
-6. runs the requested sweeps and checks their summaries.
+2. checks the shipped `zm_mixed` records with `check_records.py`, and the shipped `zmx2` per-root logs
+   (every root once, `uncert 0`, `capped 0`);
+3. clones the upstream repository and checks out the pinned commit;
+4. checks the checker hashes;
+5. computes the exact total with the upstream reader and asserts that it is `< 59`;
+6. builds `zmx2` and checks D4 invariance;
+7. runs the requested sweeps and checks their summaries; with `--zm` the fresh `zm_mixed` records are checked
+   by `check_records.py` as well.
 
 For the zmx2 sweeps it also checks that the per-root log has exactly the expected number of
 distinct roots, each with `uncert 0` and `capped 0`.
@@ -145,10 +160,12 @@ It prints `N59_COVER_VERIFIED` only if every step passes.
 |---|---|
 | `n59_mixed_cover_8.txt` | the cover (mixed 1 format) |
 | `verify.sh` | reproduction script |
-| `zmx2_d4/run.log` | zmx2 `--d4` sweep log |
-| `zmx2_full/run.log` | zmx2 `--full` sweep log |
-| `zm_mixed_d4/run.log`, `zm_mixed_d4/manifest.json` | zm_mixed sweep over all roots, depth 24 |
-| `zm_mixed_root/run.log`, `zm_mixed_root/manifest.json` | zm_mixed sweep of the root `R`, depth 34 |
+| `check_records.py` | exact check of the `zm_mixed` records |
+| `zmx2_toolchain.txt` | zmx2 binary hash, toolchain, commands |
+| `zmx2_d4/run_log.txt`, `zmx2_d4/roots_log.txt.gz` | zmx2 `--d4` sweep: output and per-root log |
+| `zmx2_full/run_log.txt`, `zmx2_full/roots_log.txt.gz` | zmx2 `--full` sweep: output and per-root log |
+| `zm_mixed_d4/run_log.txt`, `zm_mixed_d4/manifest.json`, `zm_mixed_d4/roots.jsonl.gz` | zm_mixed sweep over all roots, depth 24 |
+| `zm_mixed_root/run_log.txt`, `zm_mixed_root/manifest.json`, `zm_mixed_root/roots.jsonl` | zm_mixed sweep of the root `R`, depth 34 |
 | `SHA256SUMS` | hashes of the files above |
 
 ## Attribution
