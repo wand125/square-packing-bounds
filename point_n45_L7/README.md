@@ -32,16 +32,31 @@ Requires `git`, Python 3 and Rust 1.86 or later (the upstream source uses
 
 ```sh
 python3 check_cover.py                 # exact: hash, format, D4 invariance, total < 45
-sh verify.sh /tmp/n45-verify 8         # new directory; 8 threads
+bash verify.sh /tmp/n45-verify 8       # new directory; 8 threads
 ```
 
 `verify.sh` clones `evand/square-packing` at
 `6e1223cf7ef2be4c70baaa36c0e7e7197076735a`, checks the SHA256 of `zmx2.rs`,
 builds it in release mode, and runs the D4 check and the full D4-reduced sweep.
-It accepts only `VERIFIED-D4`, all 4,900 roots, zero uncertified boxes and zero
-capped roots, and ends with `N45_POINT_COVER_VERIFIED`. Set `CARGO` to choose a
+It accepts only an exact `D4: measure invariant` line, `VERIFIED-D4`, all 4,900
+roots, zero uncertified boxes and zero capped roots, and ends with
+`N45_POINT_COVER_VERIFIED`. It also records the toolchain and the hash of the
+built binary (`toolchain.txt` in the work directory) and compares the new
+per-root log with the reference run in `reference/` root by root. Set `CARGO` to choose a
 toolchain. The reference run in `provenance.json` took 204 seconds with 8
-threads (1,295,460 boxes, maximum depth 38).
+threads (1,295,460 boxes, maximum depth 38). Its per-root log and summary are
+shipped as `reference/roots.txt` (SHA256 `a353a0ca…`, the `roots_sha256` in
+`provenance.json`) and `reference/run.txt`. A replay with the corrected
+`verify.sh` on Linux x86_64 (rustc 1.86.0, binary SHA256 `80596601…`) agreed
+with it on every root: the same 4,900 roots and the same box, certified, empty
+and uncertified counts per root.
+
+Earlier versions of `verify.sh` checked D4 invariance with
+`zmx2 d4 cover.txt | tee d4.log; grep -q invariant d4.log`. That test could not
+fail: the pipeline's status is `tee`'s, and zmx2's failure message also
+contains the word "invariant". The cover itself is D4-invariant (checked
+exactly by `check_cover.py`, and by `zmx2 d4`, which exits with status 2 on a
+non-invariant cover), so the result is unaffected.
 
 ## How the measure was found
 
