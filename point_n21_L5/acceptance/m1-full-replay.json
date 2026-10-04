@@ -79,7 +79,8 @@
     }
   ],
   "seconds": 8577.313336874999,
-  "linkage_sha256": "6efc5fe539db5a37ec1ac0851271cee4c51dc5912d886d059ef253769bf7e0dc",
+  "linkage_sha256": "694d43bc2f14afaa77597f5c1aaef594757a444a05908ffc86a38db9074dfcb4",
   "independent_external_review": false,
-  "formal_verification": false
+  "formal_verification": false,
+  "path_relativization_note": "Hashes of the linkage records were updated after absolute paths in them were made relative; previous -> current values are listed in ../path-relativization-map.json"
 }

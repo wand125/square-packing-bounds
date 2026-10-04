@@ -4,8 +4,8 @@
 assembly with the local root and sieve replays. All six workers exited zero.
 `split-linkage.json.gz` is the byte-preserved complete assembly record, including
 source hashes and output bindings. Its decompressed SHA256 is recorded in the
-summary. Absolute paths identify historical run outputs; the reproducer creates
-new paths and new output bindings on the reader's machine.
+summary. Paths identify historical run outputs; the reproducer creates new
+paths and new output bindings on the reader's machine.
 
 The prefix comparison records show exact proof-object agreement with the earlier
 run. The distribution records describe byte-preserving copying and an actual
@@ -23,7 +23,16 @@ and 75,130 source inputs after transfer.
 is present byte-for-byte in the trimmed distribution. The numerical run used
 the original frozen bundle; packaging and extraction were checked separately.
 The compressed/decompressed linkage SHA256 values are in this binding record.
-Historical absolute paths identify the original run and are not required paths
-for reproduction.
+Historical paths identify the original run and are not required paths for
+reproduction.
 Use `verify_portable.py` for a fresh complete numerical check; do not treat these
 historical JSON records as a substitute for executing the checker.
+
+On 2026-10-04 the absolute paths of the original machines in both linkage
+records were made relative (prefix removed; nothing else changed), and the
+archive was rebuilt the same way. The hash fields in these records that refer
+to the linkage files and to the distribution manifest were updated; the
+previous values are kept in `previous_*` fields and in
+`../path-relativization-map.json`. The numerical runs themselves were made on
+the previous bytes. `distribution-roundtrip.json` records a fresh extraction of
+the rebuilt archive.

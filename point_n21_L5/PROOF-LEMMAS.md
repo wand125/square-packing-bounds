@@ -236,7 +236,7 @@ minimum of the axis bound and the positive-band bound gives a bound on `[0,T]`.
 When joined to a subdivision on `[T,t₁]`, the shared face is included by both
 parts; no face is lost and masses are not added between overlapping pose domains.
 
-Code: `near_axis_projection.py`, `certify_near_axis_sweep.py`,
+Code: `certify_near_axis_sweep.py`, `certify_n21_near_axis_path.py`,
 `near_axis_partition_bridge.py`. The bound is specific to its candidate weights
 and verified band; it cannot be transferred to an arbitrary angle or candidate.
 

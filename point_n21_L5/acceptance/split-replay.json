@@ -12,8 +12,8 @@
   "numerical_replay_must_precede_assembly": true,
   "independent_external_review": false,
   "formal_verification": false,
-  "split_linkage_sha256": "0607392efac50004bdc99f5d9300ecaafeedc275f6e9b3527705e8ae25ca211c",
-  "compressed_linkage_sha256": "54a155da8dd177ef9deae35269f92c5af8c35c4a19c220f46bd2526b3b0b59ef",
+  "split_linkage_sha256": "6f8b2b3531d73d36d46642f1a1201489836974942cb1edbbd818296bc78e4112",
+  "compressed_linkage_sha256": "e83b8042fa77e0aba95782b07da7143ac8e4c794648d71b7b5bea63b3b0c52f7",
   "workers": [
     {
       "name": "n21_portable_final_codexb_s0",
@@ -59,5 +59,6 @@
     }
   ],
   "scope": "Fresh split replay plus exact assembly; not the still-pending public one-command run",
-  "all_public_one_command_stages_completed": false
+  "all_public_one_command_stages_completed": false,
+  "path_relativization_note": "Hashes of the linkage records were updated after absolute paths in them were made relative; previous -> current values are listed in ../path-relativization-map.json"
 }

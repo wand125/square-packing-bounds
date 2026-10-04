@@ -66,7 +66,7 @@ Daniel's unmodified Lean project at the pinned upstream commit:
 
 The package includes `PUBLICATION.md`, `PROOF-LEMMAS.md`, `FORMAT.md`, the original
 and normalised point data, and `archive-index.json`. The 14 archive parts total
-463,568,316 bytes; unpacked inputs occupy about 2.54 GB. Allow additional space
+455,327,325 bytes; unpacked inputs occupy about 2.54 GB. Allow additional space
 for temporary extraction and replay outputs. `unpack_bundle.py` requires a new
 `bundle/` directory, verifies every archive part and all 75,130 input files,
 and reports `BUNDLE_BYTES_VERIFIED`. This reports byte integrity only.
@@ -86,3 +86,36 @@ archive extraction checked every distributed file. We distinguish that
 packaging check from numerical replay; a full run starting from these compressed
 parts was not separately timed. The commands above reproduce the same numerical
 verification from the distributed inputs.
+
+## Notes on frozen sources
+
+The Python sources in the archive are bound by hash: the unpacker checks
+`verifier-source/` against the archive manifest, and the checker binds every
+source it reads. On 2026-10-04 the archive was rebuilt with two kinds of edit,
+neither of which changes any mathematical content:
+
+- 53 JSON records contained absolute paths of the machine they were made on.
+  Those paths are now relative to the bundle root (`portable_replay.py` already
+  resolves relative paths against the bundle root), and the hashes that other
+  records embed for the edited files were updated to match.
+- `src/nagamochi_research/mixed_proof_pipeline.py`, which the checking path does
+  not use, had status messages in Japanese; they are now in English.
+
+`path-relativization-map.json` lists every edited file with its SHA256 before
+and after, and the previous manifest and archive hashes. The recorded numerical
+runs in `acceptance/` were made on the previous bytes; their linkage records
+were edited the same way (paths only), and their hash fields were updated as
+listed in the map.
+
+Two cosmetic points were left as they are:
+
+- `predicate_branch.py` and `predicate_lp_capture.py` import NumPy at module
+  level without using it (SciPy is used by both).
+- The scripts under `verifier-source/runs/evand_n21_n32_bridge_20260927/results/n21_L5_refit29_*`
+  other than `n21_L5_refit29_final_replay/` (`check.py` in `scoped_gate/` and
+  `theorem_audit/`, `audit.py` in `binding_scope_review/`, and the unit tests in
+  `soundness_review/`) are historical audit scripts. The checking path does not
+  import or run them. `check.py` and `audit.py` read original worker output
+  folders, `terminals.json`, review binding files and `review.md`, which are not
+  distributed, so they cannot be run from this package. The unit tests need only
+  `src/nagamochi_research/`.
