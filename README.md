@@ -1097,6 +1097,16 @@ s(42) >= 2739/400 = 6.8475
 
 This exceeds our rectangle certificate `rect_n42_L68275` (6.8275) and Nagamochi's closed form `1 + √31 = 6.5678…` (a reference value). The measure is 431 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 95: 9.965, a Green-series certificate
+
+[`certificates/mixed_n95_L9965`](certificates/mixed_n95_L9965/README.md) proves
+
+```
+s(95) >= 1993/200 = 9.965
+```
+
+This supersedes `mixed_n95_L996` above. This exceeds our earlier certificate `mixed_n95_L996` (9.96) and Nagamochi's closed form `1 + √78 = 9.8318…` (a reference value). The measure is 480 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
