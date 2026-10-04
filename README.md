@@ -1217,6 +1217,16 @@ s(53) >= 3051/400 = 7.6275
 
 This exceeds our rectangle certificate `rect_n53_L76075` (7.6075) and Nagamochi's closed form `1 + √40 = 7.3246…` (a reference value). The measure is 505 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 88: 9.62, a Green-series certificate
+
+[`certificates/mixed_n88_L962`](certificates/mixed_n88_L962/README.md) proves
+
+```
+s(88) >= 481/50 = 9.62
+```
+
+This supersedes `mixed_n88_L96125` above. This exceeds our earlier certificate `mixed_n88_L96125` (9.6125) and Nagamochi's closed form `1 + √71 = 9.4261…` (a reference value). The measure is 562 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
