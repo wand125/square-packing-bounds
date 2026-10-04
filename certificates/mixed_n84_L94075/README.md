@@ -27,8 +27,6 @@ packing are disjoint, so 84 squares would need total mass `>= 84`.
 - `candidate.json`: the rational measure (`L`, `B`, the 569 rectangles and their weights).
 - `certificate.json`: the result of the full replay, covering the axis table and all 200 oblique angles.
 - `manifest.json`: the angle net and the verifier's SHA-256.
-- `completion-audit.json`: the audit of the candidate, the mass, the angle set, the replay
-  states, the source hashes and the exact comparison.
 - `code/`: the checker (Python 3 with NumPy, and a C++17 compiler).
 - `n84-L9.4075-proof-bundle.tar.gz`: the complete bundle, 622 files including every angle's
   input and result (SHA-256 `01274b160a5b525918cd35fc54362c08d088d6c1e698b98a947908844f0c0b66`).
