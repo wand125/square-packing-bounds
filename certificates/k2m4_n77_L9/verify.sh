@@ -1,15 +1,15 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Re-check s(77) = 9: fetch Evan Daniel's checkers at a pinned commit (not bundled), verify their hashes,
 # check the cover's exact total and D4 invariance, and run the full sweeps.
 #
-#   sh verify.sh <new work directory> [threads] [--full] [--zm]
+#   bash verify.sh <new work directory> [threads] [--full] [--zm]
 #
 #   default : zmx2 cert --d4 --pair-points            (8,100 roots; ~20 min on 16 threads)
 #   --full  : also zmx2 cert --full --pair-points      (64,800 roots, no symmetry assumed; ~2.5 h)
 #   --zm    : also zm_mixed.py cert --d4 --cert-mode   (129,600 roots, exact rationals; ~94 CPU-h)
 #
 # Needs git, Python 3 with numpy, and Rust >= 1.86 (cargo; set CARGO to choose a toolchain).
-set -eu
+set -euo pipefail
 UPSTREAM_URL=https://github.com/evand/square-packing.git
 UPSTREAM_COMMIT=b91d70b6ed314624c1434b628a9c7bf9a132c743
 ZMX2_RS=6b7f0f79466bf25c9a85f8fe2f3866de734935f0521ea188136818c2fb5b3fed
@@ -18,7 +18,7 @@ MIXED_COVER=bb89de15ecf5821dd7e1a36ebab8a50d792a406b7fb0f5cb38059f99ef74aae5
 ZEROMARGIN=640fe453c1a32f4aa580ca2b1261c6406923a4d7c131f65604a432c7fc2086ab
 
 HERE=$(cd "$(dirname "$0")" && pwd)
-WORK=${1:?usage: sh verify.sh <new work directory> [threads] [--full] [--zm]}
+WORK=${1:?usage: bash verify.sh <new work directory> [threads] [--full] [--zm]}
 shift
 THREADS=8
 FULL=0
@@ -59,10 +59,13 @@ print('total', t, '=', float(t), '< 77')
 EOF
 )
 
-"$CARGO" build --release --manifest-path "$U/verify2/Cargo.toml" --bin zmx2 > "$WORK/build.log" 2>&1 || { tail -20 "$WORK/build.log"; exit 1; }
+"$CARGO" build --release --manifest-path "$U/verify2/Cargo.toml" --bin zmx2 > "$WORK/build.txt" 2>&1 || { tail -20 "$WORK/build.txt"; exit 1; }
 Z="$U/verify2/target/release/zmx2"
-"$Z" d4 "$COVER" | tee "$WORK/d4check.log"
-grep -q 'invariant' "$WORK/d4check.log"
+{ echo "upstream $UPSTREAM_COMMIT"; "$CARGO" --version; rustc --version 2>/dev/null || true; uname -sm
+  echo "zmx2 binary sha256 $(sha "$Z")"; echo "cover sha256 $(sha "$COVER")"; } | tee "$WORK/toolchain.txt"
+"$Z" d4 "$COVER" > "$WORK/d4check.txt" 2>&1
+cat "$WORK/d4check.txt"
+grep -q '^D4: measure invariant' "$WORK/d4check.txt"
 
 check_roots() {  # log file, expected number of roots
   python3 - "$1" "$2" <<'EOF'
@@ -76,22 +79,22 @@ print(f'{n} roots, uncertified 0, capped 0')
 EOF
 }
 
-"$Z" cert "$COVER" --d4 --pair-points --threads "$THREADS" --log "$WORK/zmx2_d4.roots" > "$WORK/zmx2_d4.log" 2>&1
-tail -2 "$WORK/zmx2_d4.log"
-grep -q '^VERIFIED-D4:' "$WORK/zmx2_d4.log" && ! grep -q 'NOT VERIFIED' "$WORK/zmx2_d4.log"
-check_roots "$WORK/zmx2_d4.roots" 8100
+"$Z" cert "$COVER" --d4 --pair-points --threads "$THREADS" --log "$WORK/zmx2_d4_roots.txt" > "$WORK/zmx2_d4_run.txt" 2>&1
+tail -2 "$WORK/zmx2_d4_run.txt"
+grep -q '^VERIFIED-D4:' "$WORK/zmx2_d4_run.txt" && ! grep -q 'NOT VERIFIED' "$WORK/zmx2_d4_run.txt"
+check_roots "$WORK/zmx2_d4_roots.txt" 8100
 
 if [ "$FULL" = 1 ]; then
-  "$Z" cert "$COVER" --full --pair-points --threads "$THREADS" --log "$WORK/zmx2_full.roots" > "$WORK/zmx2_full.log" 2>&1
-  tail -2 "$WORK/zmx2_full.log"
-  grep -q '^VERIFIED: ' "$WORK/zmx2_full.log" && ! grep -q 'NOT VERIFIED' "$WORK/zmx2_full.log"
-  check_roots "$WORK/zmx2_full.roots" 64800
+  "$Z" cert "$COVER" --full --pair-points --threads "$THREADS" --log "$WORK/zmx2_full_roots.txt" > "$WORK/zmx2_full_run.txt" 2>&1
+  tail -2 "$WORK/zmx2_full_run.txt"
+  grep -q '^VERIFIED: ' "$WORK/zmx2_full_run.txt" && ! grep -q 'NOT VERIFIED' "$WORK/zmx2_full_run.txt"
+  check_roots "$WORK/zmx2_full_roots.txt" 64800
 fi
 
 if [ "$ZM" = 1 ]; then
   (cd "$U/search" && python3 -u zm_mixed.py cert "$COVER" --d4 --cert-mode --disj --depth 24 --pitch 1/20 --ubins 16 \
-     --nproc "$THREADS" --manifest "$WORK/zm_mixed_manifest.json") > "$WORK/zm_mixed.log" 2>&1
-  tail -3 "$WORK/zm_mixed.log"
-  grep -q '^VERIFIED-D4' "$WORK/zm_mixed.log" && ! grep -q 'NOT VERIFIED' "$WORK/zm_mixed.log"
+     --nproc "$THREADS" --resume "$WORK/zm_mixed_roots.jsonl" --manifest "$WORK/zm_mixed_manifest.json") > "$WORK/zm_mixed_run.txt" 2>&1
+  tail -3 "$WORK/zm_mixed_run.txt"
+  grep -q '^VERIFIED-D4' "$WORK/zm_mixed_run.txt" && ! grep -q 'NOT VERIFIED' "$WORK/zm_mixed_run.txt"
 fi
 echo N77_COVER_VERIFIED

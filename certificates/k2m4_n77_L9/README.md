@@ -95,12 +95,38 @@ All three sweeps cover the whole container, and all three were run on the file i
 - **zm_mixed sweep.** `zm_mixed.py` works in exact rational arithmetic. Its settings are the ones
   Evan Daniel used for his `s(60)` mixed cover. `TPTS 0` means no leaf was closed by line points.
 
-Logs:
-- `zmx2_d4/run.log`
-- `zmx2_full/run.log`
-- `zm_mixed_d4/run.log` and `zm_mixed_d4/manifest.json`
+Logs of these original runs:
+- `zmx2_d4/run.txt`
+- `zmx2_full/run.txt`
+- `zm_mixed_d4/run.txt` and `zm_mixed_d4/manifest.json`
 
-The manifest records the SHA256 of the input and of the three checker files.
+The manifest records the SHA256 of the input and of the three checker files. The per-root logs
+of the original runs were not kept; the complete record of a later replay is in `record/`
+(next section).
+
+### Replay record (`record/`)
+
+All three sweeps were replayed on 2026-10-04 with `bash verify.sh <work> 31 --full --zm` on
+Linux x86_64 (32 vCPU). Every step passed and the run ended with `N77_COVER_VERIFIED`. The
+record contains everything the run wrote except the upstream clone and the build output:
+
+| file | content |
+|---|---|
+| `record/toolchain.txt` | upstream commit, `cargo`/`rustc` versions (1.86.0), platform, SHA256 of the built `zmx2` binary and of the cover |
+| `record/d4check.txt` | output of `zmx2 d4` |
+| `record/zmx2_d4_run.txt`, `record/zmx2_d4_roots.txt.gz` | `--d4` sweep: summary and per-root log (8,100 `ROOT` lines) |
+| `record/zmx2_full_run.txt`, `record/zmx2_full_roots.txt.gz` | `--full` sweep: summary and per-root log (64,800 `ROOT` lines) |
+| `record/zm_mixed_run.txt`, `record/zm_mixed_manifest.json`, `record/zm_mixed_roots.jsonl.gz` | zm_mixed sweep: log, manifest, per-root records (129,600) |
+
+The replay agrees with the original runs: the same box counts (5,810,824 for `--d4`,
+46,583,600 for `--full`), zero uncertified, and an identical zm_mixed census (826,120 boxes; PIECE 9,032, ADM 156,385, CHAIN 181,324,
+SPLIT 97,450, EMPTY 33,669, UNCERTIFIED 0, TPTS 0). Replay times: `--d4` 703 s, `--full`
+4,302 s, zm_mixed 12,287 s wall / 316,857 s CPU (31 threads or processes).
+Absolute paths of the replay machine were replaced by relative ones in `zm_mixed_run.txt`,
+`zm_mixed_manifest.json` and the header line of `zm_mixed_roots.jsonl` after the run; the
+manifest's `records.sha256` was recomputed for the edited records file and its `note` field
+gives the hash before the edit. The zmx2 files are unedited.
+A new run can be compared root by root with these files.
 
 ### Checkers used (not bundled)
 
@@ -127,9 +153,9 @@ Requirements:
 - Rust >= 1.86 (`cargo`; set `CARGO=...` to pick a toolchain).
 
 ```sh
-sh verify.sh /path/to/new/workdir 16            # hashes, exact total, D4, zmx2 --d4 (about 20 min)
-sh verify.sh /path/to/new/workdir 16 --full     # also zmx2 --full (about 2.5 h more)
-sh verify.sh /path/to/new/workdir 16 --zm       # also zm_mixed --d4 --cert-mode (about 94 CPU-hours)
+bash verify.sh /path/to/new/workdir 16            # hashes, exact total, D4, zmx2 --d4 (about 20 min)
+bash verify.sh /path/to/new/workdir 16 --full     # also zmx2 --full (about 2.5 h more)
+bash verify.sh /path/to/new/workdir 16 --zm       # also zm_mixed --d4 --cert-mode (about 94 CPU-hours)
 ```
 
 `verify.sh` does the following, in order:
@@ -137,8 +163,12 @@ sh verify.sh /path/to/new/workdir 16 --zm       # also zm_mixed --d4 --cert-mode
 2. clones the upstream repository and checks out the pinned commit;
 3. checks the checker hashes;
 4. computes the exact total with the upstream reader and asserts that it is `< 77`;
-5. builds `zmx2` and checks D4 invariance;
+5. builds `zmx2`, writes `toolchain.txt` (versions and binary hash) and checks D4 invariance
+   (it requires the exact line `D4: measure invariant ...`);
 6. runs the requested sweeps and checks the summary line.
+
+The script runs under `bash` with `set -euo pipefail`, so a failing command inside a pipeline
+also stops it. All logs it writes end in `.txt`, `.jsonl` or `.json`.
 
 For the zmx2 sweeps it also checks that the per-root log has exactly the expected number of
 distinct roots, each with `uncert 0` and `capped 0`.
@@ -151,10 +181,16 @@ It prints `N77_COVER_VERIFIED` only if every step passes.
 |---|---|
 | `n77_mixed_cover_9.txt` | the cover (mixed 1 format) |
 | `verify.sh` | reproduction script |
-| `zmx2_d4/run.log` | zmx2 `--d4` sweep log |
-| `zmx2_full/run.log` | zmx2 `--full` sweep log |
-| `zm_mixed_d4/run.log`, `zm_mixed_d4/manifest.json` | zm_mixed sweep log and manifest |
-| `SHA256SUMS` | hashes of the files above |
+| `zmx2_d4/run.txt` | zmx2 `--d4` sweep log (original run) |
+| `zmx2_full/run.txt` | zmx2 `--full` sweep log (original run) |
+| `zm_mixed_d4/run.txt`, `zm_mixed_d4/manifest.json` | zm_mixed sweep log and manifest (original run) |
+| `record/` | complete record of the 2026-10-04 replay (see above) |
+| `SHA256SUMS` | hashes of all files above |
+
+The original logs were first published as `run.log`. The repository's `.gitignore` excludes
+`*.log`, so those files were missing from a fresh clone while `SHA256SUMS` still listed them,
+and `verify.sh` stopped at its first step. They are now named `run.txt`; their contents are
+unchanged.
 
 ## Attribution
 
