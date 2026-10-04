@@ -1047,6 +1047,16 @@ s(51) >= 747/100 = 7.47
 
 This supersedes `mixed_n51_L746` above. This exceeds our earlier certificate `mixed_n51_L746` (7.46) and Green's reported bound `7.3174…` (a reference value). The measure is 489 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 75: 8.94, a Green-series certificate
+
+[`certificates/mixed_n75_L894`](certificates/mixed_n75_L894/README.md) proves
+
+```
+s(75) >= 447/50 = 8.94
+```
+
+This supersedes `mixed_n75_L892` above. This exceeds our earlier certificate `mixed_n75_L892` (8.92) and Nagamochi's closed form `1 + √60 = 8.7460…` (a reference value). The measure is 589 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
