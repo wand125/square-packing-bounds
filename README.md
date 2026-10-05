@@ -1277,6 +1277,16 @@ s(66) >= 843/100 = 8.43
 
 This supersedes `mixed_n66_L842` above. This exceeds our earlier certificate `mixed_n66_L842` (8.42) and Green's reported bound `8.2900…` (a reference value). The measure is 713 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996`; the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## n = 18: 4.7, a mixed certificate on a finer angle net
+
+[`certificates/mixed_n18_L470`](certificates/mixed_n18_L470/README.md) proves
+
+```
+s(18) >= 47/10 = 4.7
+```
+
+This exceeds our rectangle certificate `rect_n18_L4695` (4.695). The measure is 136 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996` and a finer angle net (see the certificate README); the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
