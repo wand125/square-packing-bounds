@@ -1,0 +1,32 @@
+{
+ "status": "VERIFIED",
+ "exit": 0,
+ "n": 28,
+ "L": "5.74",
+ "B": "0.9995",
+ "proof_net": {
+  "step": "1/2006",
+  "last": 831
+ },
+ "directions_expected": 832,
+ "directions_checked": 832,
+ "directions_verified": 832,
+ "candidate_digest": "d664e35560aaa9ef746e8e1672c81fde4150b574508526ec9ccdce7d1e415ada",
+ "file_sha256": "71ee7b8736de67a2cf8257b4504cb9ac497cd5a214ea0813e05fd0d8bae69f17",
+ "input_sha256": "71ee7b8736de67a2cf8257b4504cb9ac497cd5a214ea0813e05fd0d8bae69f17",
+ "build": {
+  "profile": "release",
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+  "source_sha256": "ab6e33e164dbc5c32b40349ba55981b58e630b5eef59534196a69d259404fd7c",
+  "target": "x86_64-unknown-linux-gnu"
+ },
+ "seconds": 1052,
+ "control": {
+  "kind": "every mass x 0.985, 32 directions",
+  "status": "REFUSED",
+  "exit": 1,
+  "refused_directions": 32,
+  "exact_below_threshold": 31
+ },
+ "verdict": "PASS"
+}
