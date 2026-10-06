@@ -1312,6 +1312,16 @@ s(29) >= 581/100 = 5.81
 
 This exceeds our rectangle certificate `rect_n29_L57975` (5.7975) and Nagamochi's closed form `1 + √20 = 5.4721…` (a reference value). The measure is 505 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996` and a finer angle net (see the certificate README); before publication the candidate was checked with the independent `sqverify_fast` on a fresh Ubuntu 24.04 machine (see the certificate README).
 
+## n = 20: 4.905, a mixed certificate on a finer angle net
+
+[`certificates/mixed_n20_L4905`](certificates/mixed_n20_L4905/README.md) proves
+
+```
+s(20) >= 981/200 = 4.905
+```
+
+This exceeds our earlier certificate rect_n20_L49 (4.9) and Nagamochi's closed form `4.6056…` (a reference value). The certificate is a rational rectangle measure of mass 1999999/100000 with core B = 1999/2000 on a declared half-angle net of 832 directions. It is checked with the independently implemented `sqverify_fast` (source and reproduction notes in the bundle); before publication the check was run again on a fresh Ubuntu 24.04 machine (see the certificate README).
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
