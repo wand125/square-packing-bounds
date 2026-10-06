@@ -1287,6 +1287,21 @@ s(18) >= 47/10 = 4.7
 
 This exceeds our rectangle certificate `rect_n18_L4695` (4.695). The measure is 136 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996` and a finer angle net (see the certificate README); the pre-publication replay was run from the bundle on a fresh Ubuntu 24.04 machine with only the README's requirements installed.
 
+## Finer-net improvements: n = 18 and 19
+
+| n | Lower bound | Certificate | Supersedes |
+|---|---|---|---|
+| 18 | **588/125 = 4.704** | [mixed_n18_L4704](certificates/mixed_n18_L4704/README.md) | mixed_n18_L470 (4.7) |
+| 19 | **48229/10000 = 4.8229** | [mixed_n19_L48229](certificates/mixed_n19_L48229/README.md) | rect_n19_L48175 (4.8175) |
+
+Both use rational rectangle measures of mass n - 1/100000 and a finer declared
+angle net: n18 uses core 1999/2000 and 832 directions of step 1/2006; n19 uses
+core 999/1000 and 416 directions of step 1/1001. Complete bundled proof/replay
+records and separate Rust verification receipts are supplied. The READMEs
+separate original replay, independent verification and publication metadata
+checks; the exact adapted Rust source is included under verification/sqverify-net.
+These are lower bounds, not optimality claims.
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
