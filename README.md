@@ -1302,6 +1302,16 @@ separate original replay, independent verification and publication metadata
 checks; the exact adapted Rust source is included under verification/sqverify-net.
 These are lower bounds, not optimality claims.
 
+## n = 29: 5.81, a mixed certificate on a finer angle net
+
+[`certificates/mixed_n29_L581`](certificates/mixed_n29_L581/README.md) proves
+
+```
+s(29) >= 581/100 = 5.81
+```
+
+This exceeds our rectangle certificate `rect_n29_L57975` (5.7975) and Nagamochi's closed form `1 + √20 = 5.4721…` (a reference value). The measure is 505 rectangles, built from scratch from a structured initial measure and repaired on the full net, with the same verifier as `mixed_n96_L996` and a finer angle net (see the certificate README); before publication the candidate was checked with the independent `sqverify_fast` on a fresh Ubuntu 24.04 machine (see the certificate README).
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
