@@ -1452,6 +1452,16 @@ s(27) >= 2261/400 = 5.6525
 
 This supersedes `mixed_n27_L56435` above. This exceeds our earlier certificate mixed_n27_L56435 (5.6435) and Green's reported bound `5.3919…` (a reference value). The certificate is a rational rectangle measure of mass 2699999/100000 with core B = 4999/5000 on a declared half-angle net of 2073 directions. It is checked with the independently implemented `sqverify_fast` (source and reproduction notes in the bundle); before publication the check was run again on a fresh Ubuntu 24.04 machine (see the certificate README).
 
+## n = 26: 5.555, a mixed certificate on a finer angle net
+
+[`certificates/mixed_n26_L5555`](certificates/mixed_n26_L5555/README.md) proves
+
+```
+s(26) >= 1111/200 = 5.555
+```
+
+This supersedes `mixed_n26_L5545` above. This exceeds our earlier certificate mixed_n26_L5545 (5.545) and Green's reported bound `5.3919…` (a reference value). The certificate is a rational rectangle measure of mass 2599999/100000 with core B = 4999/5000 on a declared half-angle net of 2073 directions. It is checked with the independently implemented `sqverify_fast` (source and reproduction notes in the bundle); before publication the check was run again on a fresh Ubuntu 24.04 machine (see the certificate README).
+
 ## Closed-square endpoint certificate for n = 21
 
 The separate [point-only endpoint bundle](point_n21_L5/README.md) proves
