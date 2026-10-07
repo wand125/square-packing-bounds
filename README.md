@@ -1,3 +1,5 @@
+> **Moved:** this repository is now part of [wand125/square-packing](https://github.com/wand125/square-packing/tree/main/problems/square-lower-bounds) (`problems/square-lower-bounds/`). This copy is archived; every path is mapped in `MOVED.json`, and old links, commits and releases keep working.
+
 # Lower bounds for packing 18–21, 26–32, 39, 45, 53, 55, 56, 69, 70 and 72 unit squares
 
 Let `s(n)` be the least side of a square that holds `n` unit squares with
